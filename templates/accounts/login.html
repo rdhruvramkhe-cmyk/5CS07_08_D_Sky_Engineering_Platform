@@ -1,3 +1,5 @@
+{# Author: Dhruv Ramkhalawon #}
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -5,12 +7,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sky Engineering - Sign In</title>
+
+  {# Load the stylesheet for the authentication page #}
   <link rel="stylesheet" href="{% static 'css/auth.css' %}" />
 </head>
 <body class="auth-page">
   <div class="auth-card">
     <div class="auth-content">
       <div class="logo-container">
+        {# Display the Sky logo at the top of the sign-in card #}
         <img
           src="{% static 'Sky_logo_2025.svg.png' %}"
           alt="Sky Logo"
@@ -20,12 +25,14 @@
 
       <p class="subtitle">Sign in to your account</p>
 
+      {# Show a general login error if the submitted form is invalid #}
       {% if form.errors %}
         <div class="message-box error">
           Your username or password was incorrect. Please try again.
         </div>
       {% endif %}
 
+      {# Display any Django messages such as success or warning messages #}
       {% if messages %}
         {% for message in messages %}
           <div class="message-box {{ message.tags }}">
@@ -34,6 +41,7 @@
         {% endfor %}
       {% endif %}
 
+      {# Main sign-in form #}
       <form method="POST">
         {% csrf_token %}
 
@@ -46,6 +54,7 @@
             value="{{ form.username.value|default:'' }}"
             required
           />
+          {# Show field-specific username errors if present #}
           {% if form.username.errors %}
             <small class="error-text">{{ form.username.errors|striptags }}</small>
           {% endif %}
@@ -60,15 +69,18 @@
               id="id_password"
               required
             />
+            {# Toggle password visibility for easier input checking #}
             <span class="toggle-password" onclick="this.previousElementSibling.type = this.previousElementSibling.type === 'password' ? 'text' : 'password'">
               Show
             </span>
           </div>
+          {# Show field-specific password errors if present #}
           {% if form.password.errors %}
             <small class="error-text">{{ form.password.errors|striptags }}</small>
           {% endif %}
         </div>
 
+        {# Link to the password reset page #}
         <p class="switch-link" style="text-align:right; margin-top:5px;">
           <a href="{% url 'password_reset' %}">Forgot your password?</a>
         </p>
@@ -78,6 +90,7 @@
         <button type="submit" class="btn btn-blue">Sign In</button>
       </form>
 
+      {# Link to the registration page for new users #}
       <p class="switch-link">
         Don’t have an account? <a href="{% url 'signup' %}">Register here</a>
       </p>
