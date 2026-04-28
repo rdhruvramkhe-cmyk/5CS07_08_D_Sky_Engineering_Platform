@@ -1,0 +1,45 @@
+{% extends "sky/base.html" %}
+{% comment %}
+  
+  Author: Hisham Suleman
+  Custom login page using Django's built-in LoginView
+  URL: /login/ — unauthenticated users are redirected here by @login_required
+{% endcomment %}
+
+{% block title %}Login — Sky Engineering{% endblock %}
+
+{% block content %}
+<div class="login-wrapper">
+    <div class="detail-header">
+        <div class="card-tag">&#9632; Authentication</div>
+        <h1>Sign In</h1>
+        <p>Access the Sky Engineering Internal Portal</p>
+
+        {# Django's LoginView handles the POST — we just need the form fields and csrf token #}
+        <form method="post" style="margin-top: 1.5rem;">
+            {% csrf_token %}
+
+            {# form.errors is populated by Django if the username/password didn't match #}
+            {% if form.errors %}
+            <div class="login-error">
+                Invalid username or password. Please try again.
+            </div>
+            {% endif %}
+
+            <div class="form-group">
+                <label class="form-label">Username</label>
+                <input type="text" name="username" class="search-input" style="width: 100%;" autofocus>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Password</label>
+                <input type="password" name="password" class="search-input" style="width: 100%;">
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">
+                Sign In &rarr;
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,2986 @@
+[
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$GfAMwoFwzmLrrcODe5SUSa$/T/3UISRa4fa+knKN2Mu59h/tDuw/xcCRBdOcQSP6YE=",
+    "last_login": "2026-04-26T20:27:10Z",
+    "is_superuser": true,
+    "username": "dhruvramkhe",
+    "first_name": "",
+    "last_name": "",
+    "email": "w2102678@westminster.ac.uk",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-04-26T15:37:31Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$iZ6BXkCkxbodJy6ggBXt0h$97H7FBlvfjHn/9sBhli7+NYtnF5HX/qNwT/Sw3I7N5I=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Alice",
+    "first_name": "Alice",
+    "last_name": "Danvers",
+    "email": "Adanvers@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-26T15:42:33Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$X1pK2wvGYMWBMbmpqAZp1W$ln5uUHLIsoxh0YGERsazYlyxVdQXKoGcTQ9wmv82FLk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "John",
+    "first_name": "John",
+    "last_name": "Prescott",
+    "email": "Jprescott@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-26T15:42:49Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$Z9hi9cfgLJridLbLfWXMms$+t+BLPZv1OmBy+2GSlvlKCqyukWhgj+BQ4vvcFvUr/4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Emma",
+    "first_name": "Emma",
+    "last_name": "Sterling",
+    "email": "Esterling@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-26T15:43:08Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$NZRk1CfRvFhJcSKOdJLRnW$bF2u+ntdtYVH8JP1XXwkFGufc7wt6Zf8RWJy2pVmj3M=",
+    "last_login": "2026-04-26T23:07:35.336Z",
+    "is_superuser": false,
+    "username": "TestDummy1",
+    "first_name": "Test",
+    "last_name": "Dummy1",
+    "email": "testdummy1@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-26T19:11:58Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$gfs4rxYbtMtDN5tLLoaWqn$FoY0cErO5vdMf6HdcHmpKEqlu9YdflZK+wyASikMV9s=",
+    "last_login": "2026-04-26T20:43:51Z",
+    "is_superuser": false,
+    "username": "CR7",
+    "first_name": "Cristiano",
+    "last_name": "Ronaldo",
+    "email": "Cronaldo@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-26T20:43:50Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$aQE1nYRHoaHKpwHN3VQr3X$YOPTQmO+wilQWM+m3kWghRLSpDy/v8IQhH5LCGBa+h4=",
+    "last_login": "2026-04-28T13:51:24.213Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "rdhruvramkhe@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-04-26T21:17:09.803Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 8,
+  "fields": {
+    "password": "!uZdO2ynjhG3t9ReL8PAt0IZUAePeKdHwpOLi2ffA",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Sophia",
+    "first_name": "Sophia",
+    "last_name": "Reed",
+    "email": "Sreed@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-26T21:23:27Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 9,
+  "fields": {
+    "password": "!NFMI6ANcJjhHR9VgKIjFu32DsyLxrczWCEgWx4JZ",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Oliver",
+    "first_name": "Oliver",
+    "last_name": "Hayes",
+    "email": "Ohayes@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-26T21:23:45Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 10,
+  "fields": {
+    "password": "!Hehl8leGBXPOqhdLpXV5RzXXg32KlRy9IhB5n8Xe",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Mia",
+    "first_name": "Mia",
+    "last_name": "Harrington",
+    "email": "Mharrington@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-26T21:28:10Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 11,
+  "fields": {
+    "password": "!gP6HH0OqIpXBnriM8E1llAcUppOnMLazHwM81swX",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "David",
+    "first_name": "David",
+    "last_name": "Lockwood",
+    "email": "Dlockwood@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-26T21:28:37Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 12,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$i2kXeBeLCGYCnV1ePGWYWi$ulN7hYy71bHkd4/U0DztS0XQ2BIYFlFISrpdEkkf38Y=",
+    "last_login": "2026-04-27T15:56:00Z",
+    "is_superuser": false,
+    "username": "Ella",
+    "first_name": "Alesha",
+    "last_name": "Joye",
+    "email": "ella@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-27T15:54:35Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 13,
+  "fields": {
+    "password": "!pLQyFAk09fArBxrAUwhigE2WmBNxT50NxMCTXC4X",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Daniel",
+    "first_name": "Daniel",
+    "last_name": "Moreau",
+    "email": "Dmoreau@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:21:32Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 14,
+  "fields": {
+    "password": "!E9FBMlKvuso68G71kJ7vwIcjxxkgwz434KnnEEsh",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Chloe",
+    "first_name": "Chloe",
+    "last_name": "Bernard",
+    "email": "Cbernard@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:22:33Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 15,
+  "fields": {
+    "password": "!pojmWdup0HKsrMDt0i2fnCfm0tBkcBr34FFOSn1N",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Ethan",
+    "first_name": "Ethan",
+    "last_name": "Dubois",
+    "email": "Edubois@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:24:15Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 16,
+  "fields": {
+    "password": "!GzcQGtvobK72ohYLrfn79BP5lMzyllKpfgiaCzsI",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Amelie",
+    "first_name": "Amelie",
+    "last_name": "Rousseau",
+    "email": "Arousseau@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:24:47Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 17,
+  "fields": {
+    "password": "!yWRfn44rdTKOltsQ4zTnWObpJesMnE3MdjKAm7O4",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Lucas",
+    "first_name": "Lucas",
+    "last_name": "Petit",
+    "email": "Lpetit@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:25:29Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 18,
+  "fields": {
+    "password": "!vtMJu49SmMaQaGQcpJQc0YdgERdjzziiEj0yU2z7",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Hugo",
+    "first_name": "Hugo",
+    "last_name": "Garcia",
+    "email": "Hgarcia@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:28:35Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 19,
+  "fields": {
+    "password": "!InuKfGYqon1h935k3HpEU6Rd3QVPiqurnYyYoStc",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Camille",
+    "first_name": "Camille",
+    "last_name": "Fournier",
+    "email": "Cfournier@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:29:27Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 20,
+  "fields": {
+    "password": "!O1okW62wjqyB9zRDG5YjCWEZE2Yqbb8EsvQFHhmm",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Theo",
+    "first_name": "Theo",
+    "last_name": "Lambert",
+    "email": "Tlambert@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:30:07Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 21,
+  "fields": {
+    "password": "!ljeuHUfuIsEdNUwdVb88UuMZKPv5my9u0VO8ryJN",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Thomas",
+    "first_name": "Thomas",
+    "last_name": "Walker",
+    "email": "Twalker@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:30:41Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 22,
+  "fields": {
+    "password": "!V0Bwy5CzPkFLUSSbr7be7jRL062vDM3owjszsK03",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Lucy",
+    "first_name": "Lucy",
+    "last_name": "Bennett",
+    "email": "Lbennett@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:31:12Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 23,
+  "fields": {
+    "password": "!eQNgPO6MWx2qBOEbYnMTimwFZOsjhOS73JlkKZkM",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Ryan",
+    "first_name": "Ryan",
+    "last_name": "Clarke",
+    "email": "RClarke@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:31:59Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 24,
+  "fields": {
+    "password": "!CblknzSYbdTbSRhiSaPEmpDKz0lIu2EpMEkvdDiZ",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Kevin",
+    "first_name": "Kevin",
+    "last_name": "Zhang",
+    "email": "Kzhang@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:32:41Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 25,
+  "fields": {
+    "password": "!xMTAkOSwQncWgTlMShamsc9c86xdNHxBL1mRMbfE",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Aaron",
+    "first_name": "Aaron",
+    "last_name": "Hill",
+    "email": "Ahill@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:33:15Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 26,
+  "fields": {
+    "password": "!Czz1JyYlu5WRQN5bjOXtKonDVdVl3JrPU9BmeySt",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Harry",
+    "first_name": "Harry",
+    "last_name": "Maguire",
+    "email": "Hmaguire@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:33:39Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 27,
+  "fields": {
+    "password": "!yMIPMJYX9oogyXcTvFb04kGTN6gm3yaR7rbpGhkF",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Lionel",
+    "first_name": "Lionel",
+    "last_name": "Messi",
+    "email": "LMessi@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:34:04Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 28,
+  "fields": {
+    "password": "!HwddZstIq0qfuYJEvwYlg6jCKm5m33vEGthNGYPd",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Luke",
+    "first_name": "Luke",
+    "last_name": "Wright",
+    "email": "Lwright@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:34:33Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 29,
+  "fields": {
+    "password": "!CYTWXOoCjZsx9fyIne0lFlhptKa7k2yqGtQ5hGwK",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Ben",
+    "first_name": "Ben",
+    "last_name": "Scott",
+    "email": "Bscott@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:34:56Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 30,
+  "fields": {
+    "password": "!ofu5khlzieFHw4KKHovIdO3auchLc7OKPVXYeBgD",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Max",
+    "first_name": "Max",
+    "last_name": "King",
+    "email": "Mking@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:35:22Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 31,
+  "fields": {
+    "password": "!CGYZf2PzpoM68DHHYXqR6NWXd8z7ZGrzmEgg8x9y",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Charlie",
+    "first_name": "Charlie",
+    "last_name": "Young",
+    "email": "Cyoung@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:35:43Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 32,
+  "fields": {
+    "password": "!1YzD6ADA6o0bKmM2i7ksJSq9SXwj4ffFCkNhm2Ml",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Joshua",
+    "first_name": "Joshua",
+    "last_name": "Clark",
+    "email": "Jclark@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:36:10Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 33,
+  "fields": {
+    "password": "!PL9iehvdwMRyneGsFKzIeSrGvwkQpLsG2V6nE771",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "William",
+    "first_name": "William",
+    "last_name": "Harris",
+    "email": "Wharris@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:36:33Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 34,
+  "fields": {
+    "password": "!EeOQiC4HJV2UGPAwECLyuVeqvwphtc569yNO9t9h",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Lily",
+    "first_name": "Lily",
+    "last_name": "Hall",
+    "email": "LHall@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:36:54Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 35,
+  "fields": {
+    "password": "!wEDU525aKezosRzkcAI0edfzRXq20Mf29gAs5Hk8",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Sophie",
+    "first_name": "Sophie",
+    "last_name": "Roberts",
+    "email": "Sroberts@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:37:16Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 36,
+  "fields": {
+    "password": "!2IxlpHHqV6dXe5HV0zhC0GKQU2O8U0lwomfOtkJT",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Grace",
+    "first_name": "Grace",
+    "last_name": "Wilson",
+    "email": "Gwilson@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:37:37Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 37,
+  "fields": {
+    "password": "!Hoeo0yEOfTHU9Zv8twwyVUR9i8dDIayZdHqFIzWN",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Emily",
+    "first_name": "Emily",
+    "last_name": "Davies",
+    "email": "Edavies@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:37:57Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 38,
+  "fields": {
+    "password": "!7bm86YOA2EO1CIoaEAUl8W8sJTBmviG4nAzlUkbk",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Jacob",
+    "first_name": "Jacob",
+    "last_name": "Brown",
+    "email": "Jbrown@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:38:45Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 39,
+  "fields": {
+    "password": "!CSQGYLt5SNHIoPmpW06X66r5c6YLYpwb5w1qYQJV",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Henry",
+    "first_name": "Henry",
+    "last_name": "Walker",
+    "email": "Hwalker@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:39:15Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 40,
+  "fields": {
+    "password": "!SQBvN4fRmzCRty9fP8OZetsPvw3PnFDxz6dm6ihb",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Oscar",
+    "first_name": "Oscar",
+    "last_name": "Evans",
+    "email": "Oevans@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:39:42Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 41,
+  "fields": {
+    "password": "!7YLhqCVWHfXe6lyNv1YuHg8aKHn3rUgCHCy0HhWn",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Freddie",
+    "first_name": "Freddie",
+    "last_name": "Turner",
+    "email": "Fturner@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:40:05Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 42,
+  "fields": {
+    "password": "!QizUWQ7IZzkiSZNyPTYRkzO7gJmLxsRouplESj2A",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "George",
+    "first_name": "George",
+    "last_name": "Philips",
+    "email": "Gphilips@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:40:29Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 43,
+  "fields": {
+    "password": "!K7Vw0ZXDucZoGe3sPIaTEVxfoyye0kATIUsTYjQK",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Olivia",
+    "first_name": "Olivia",
+    "last_name": "Taylor",
+    "email": "Otaylor@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T01:57:15Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 44,
+  "fields": {
+    "password": "!ub8QCJlUeX1Uweop3oGCnJ6J5NIvBwj3U2XwHS2d",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Michael",
+    "first_name": "Michael",
+    "last_name": "Scott",
+    "email": "Mscott@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:04:20Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 45,
+  "fields": {
+    "password": "!v55D67nle6i81z5t6pa8segLHhvoottY4EwYYJ7v",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Stefan",
+    "first_name": "Stefan",
+    "last_name": "Ilic",
+    "email": "Silic@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:04:53Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 46,
+  "fields": {
+    "password": "!HX3XaNSny48gq9EUUC62qAscEt5Gz9cFmwhqGXTL",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Connor",
+    "first_name": "Connor",
+    "last_name": "Hughes",
+    "email": "Chughes@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:05:31Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 47,
+  "fields": {
+    "password": "!625PIErFJxES8WIYvz3S1sfHgq7R8Bivo7mBaxAC",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Samuel",
+    "first_name": "Samuel",
+    "last_name": "White",
+    "email": "Swhite@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:05:55Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 48,
+  "fields": {
+    "password": "!fjcdJsVE2G6sHIazbnWyzEgJBBXF8IspcvYC0quY",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Nathan",
+    "first_name": "Nathan",
+    "last_name": "King",
+    "email": "Nking@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:06:16Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 49,
+  "fields": {
+    "password": "!ULNOW0YfW1iPeNrvTURbRgX97kfnfprR1V4F6eEA",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Adam",
+    "first_name": "Adam",
+    "last_name": "Green",
+    "email": "Agreen@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:06:36Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 50,
+  "fields": {
+    "password": "!BUjEkEQZC2B7XJXnoTQHc9GhxX7Un0taA9Cr0ylx",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Lisandro",
+    "first_name": "Lisandro",
+    "last_name": "Martinez",
+    "email": "Lmartinez@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:09:30Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 51,
+  "fields": {
+    "password": "!7DBomJTOAI5Hg0NSm2AfeQ06282kyoEnX6gNpe0D",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Liam",
+    "first_name": "Liam",
+    "last_name": "Carter",
+    "email": "Lcarter@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:09:58Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 52,
+  "fields": {
+    "password": "!nLSEuYvuXvEKgkr1vZWiFaPfu2CZ2JxxXoXhGWHM",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Noah",
+    "first_name": "Noah",
+    "last_name": "Philips",
+    "email": "Nphilips@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:10:20Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 53,
+  "fields": {
+    "password": "!ZneUHswO7xiLAB9ypHp25PhLo927WPMYNKVdG1iy",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Ava",
+    "first_name": "Ava",
+    "last_name": "Mitchell",
+    "email": "Amitchell@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:10:44Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 54,
+  "fields": {
+    "password": "!KdQbRoEt3p0Q2pzkUJRJC9YQ5pB2kz74iT9ApC1o",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Isabella",
+    "first_name": "Isabella",
+    "last_name": "Scott",
+    "email": "Iscott@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:11:04Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 55,
+  "fields": {
+    "password": "!fQtVT3ukDhP2tDvguDoWXsbqSEgjTVRrcJceEOnX",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Mason",
+    "first_name": "Mason",
+    "last_name": "Edwards",
+    "email": "Medwards@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:11:30Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 56,
+  "fields": {
+    "password": "!6e9PuGbqgFoXj69ZIdRYHKGRATaFRNr0KoMLdruP",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Kylian",
+    "first_name": "Kylian",
+    "last_name": "Mbappe",
+    "email": "Kmbappe@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:16:45Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 57,
+  "fields": {
+    "password": "!VrgIXJWMW6ezHYPpLcwnKlkNBgQrjElaqsHYjhIt",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Angel",
+    "first_name": "Angel",
+    "last_name": "Dimaria",
+    "email": "Adimaria@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:17:12Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 58,
+  "fields": {
+    "password": "!BDf7UvuSi2wZ7W1iWTJFHXBalfnHEm9EPL5ULryb",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Achraf",
+    "first_name": "Achraf",
+    "last_name": "Hakimi",
+    "email": "Ahakimi@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:17:50Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 59,
+  "fields": {
+    "password": "!nOJQ2zixyqVplsKiOMSgL21YnjxaddXMpr1mGVoE",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Nuno",
+    "first_name": "Nuno",
+    "last_name": "Mendes",
+    "email": "Nmendes@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:18:12Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 60,
+  "fields": {
+    "password": "!4p9wwcAA6NeMUQfVdFUoOFRqrx2g1PB1bwFX43R1",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Ousmane",
+    "first_name": "Ousmane",
+    "last_name": "Dembele",
+    "email": "Odembele@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:18:56Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 61,
+  "fields": {
+    "password": "!7i3ROantdelfniqI8rel8KHARkzykdq5W7ufKaRK",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Bruno",
+    "first_name": "Bruno",
+    "last_name": "Fernandes",
+    "email": "Bfernandes@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:24:31Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 62,
+  "fields": {
+    "password": "!kCSZsDggKtKguvd7RWoM5vOmRrDSDytp7uth1LaB",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Bryan",
+    "first_name": "Bryan",
+    "last_name": "Mbeumo",
+    "email": "Bmbeumo@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:25:07Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 63,
+  "fields": {
+    "password": "!PTJhM0zLBoZWTp3Ta1WuvscSmKPyhsktLU17jR34",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Kobie",
+    "first_name": "Kobie",
+    "last_name": "Mainoo",
+    "email": "KMainoo@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:26:00Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 64,
+  "fields": {
+    "password": "!jcf49NsC0Jz6oah7lrw7mazSSZTgML9ay80u03u4",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Diogo",
+    "first_name": "Diogo",
+    "last_name": "Dalot",
+    "email": "Ddalot@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:26:37Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 65,
+  "fields": {
+    "password": "!Q8nv5SDmUK7UqRK6k0AyFIhLJeyu1SLgojjcC2ht",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Amad",
+    "first_name": "Amad",
+    "last_name": "Diallo",
+    "email": "Adiallo@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:27:35Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 66,
+  "fields": {
+    "password": "!ZFWYcOYvcQ7NceGxOHCVuevwvRaxRuVS2A1spXrT",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Benjamin",
+    "first_name": "Benjamin",
+    "last_name": "Sesko",
+    "email": "Bsesko@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:28:00Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 67,
+  "fields": {
+    "password": "!U9Hl0i21goBhXTTL7tnhGQocD9ptJKVTDiqlGv9V",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Phil",
+    "first_name": "Phil",
+    "last_name": "Foden",
+    "email": "Pfoden@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:31:20Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 68,
+  "fields": {
+    "password": "!xjzSlsnFDQBak0r8qQPZxaje5tsVO4KIk09i4Tak",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Erling",
+    "first_name": "Erling",
+    "last_name": "Haaland",
+    "email": "Ehaaland@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:31:47Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 69,
+  "fields": {
+    "password": "!ZdeNILh3kieiHgWD5DXsCLAh9SelbUlNPoORWkIU",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Omar",
+    "first_name": "Omar",
+    "last_name": "Marmoush",
+    "email": "Omarmoush@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:32:13Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 70,
+  "fields": {
+    "password": "!gWRzN0ZIbcp5W61wfPjUgmeHk3gxT7bTtOEUmD5O",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Antoine",
+    "first_name": "Antoine",
+    "last_name": "Semenyo",
+    "email": "Asemenyo@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:32:40Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 71,
+  "fields": {
+    "password": "!VFTPP6D5dKC2lvcW0HQP3zvEGFR9D7yidll38Men",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Bernardo",
+    "first_name": "Bernardo",
+    "last_name": "Silva",
+    "email": "Bsilva@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:33:05Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 72,
+  "fields": {
+    "password": "!WtrL9m6hK7eS6wsr1nUKnMRzMijnmRzFrWNVb8mO",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Ruben",
+    "first_name": "Ruben",
+    "last_name": "Dias",
+    "email": "Rdias@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T02:33:36Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 73,
+  "fields": {
+    "password": "!gyifYul8IARi433f91xmdHHDuv4AIbs4vyM7JsZb",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Philippe",
+    "first_name": "Philippe",
+    "last_name": "Coutinho",
+    "email": "Pcoutinho@sky.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-28T11:50:18Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "teams.department",
+  "pk": 1,
+  "fields": {
+    "department_name": "Platform Engineering",
+    "department_description": "Handles core engineering platforms, authentication, tools and shared services.",
+    "department_head": 2
+  }
+},
+{
+  "model": "teams.department",
+  "pk": 2,
+  "fields": {
+    "department_name": "FinTech",
+    "department_description": "Supports payment processing, billing and finance-related engineering services.",
+    "department_head": 3
+  }
+},
+{
+  "model": "teams.department",
+  "pk": 3,
+  "fields": {
+    "department_name": "Mobile App Engineering",
+    "department_description": "Builds and maintains mobile user journeys and app integrations.",
+    "department_head": 4
+  }
+},
+{
+  "model": "teams.department",
+  "pk": 4,
+  "fields": {
+    "department_name": "Data & AI",
+    "department_description": "Responsible for building and managing data infrastructure, analytics platforms, and machine learning solutions. The department enables data-driven decision-making across the organisation by transforming raw data into actionable insights and intelligent systems.",
+    "department_head": 8
+  }
+},
+{
+  "model": "teams.department",
+  "pk": 5,
+  "fields": {
+    "department_name": "Cyber Security",
+    "department_description": "Focused on protecting organisational systems, networks, and data from cyber threats. The department ensures security compliance, monitors vulnerabilities, and implements proactive defence strategies to safeguard customer and business information.",
+    "department_head": 9
+  }
+},
+{
+  "model": "teams.skill",
+  "pk": 1,
+  "fields": {
+    "skill_name": "Python",
+    "skill_description": ""
+  }
+},
+{
+  "model": "teams.skill",
+  "pk": 2,
+  "fields": {
+    "skill_name": "Django",
+    "skill_description": ""
+  }
+},
+{
+  "model": "teams.skill",
+  "pk": 3,
+  "fields": {
+    "skill_name": "APIs",
+    "skill_description": ""
+  }
+},
+{
+  "model": "teams.skill",
+  "pk": 4,
+  "fields": {
+    "skill_name": "SSO",
+    "skill_description": ""
+  }
+},
+{
+  "model": "teams.skill",
+  "pk": 5,
+  "fields": {
+    "skill_name": "Security",
+    "skill_description": ""
+  }
+},
+{
+  "model": "teams.skill",
+  "pk": 6,
+  "fields": {
+    "skill_name": "Mobile UI",
+    "skill_description": ""
+  }
+},
+{
+  "model": "teams.skill",
+  "pk": 7,
+  "fields": {
+    "skill_name": "SDK",
+    "skill_description": ""
+  }
+},
+{
+  "model": "teams.skill",
+  "pk": 8,
+  "fields": {
+    "skill_name": "Payments",
+    "skill_description": ""
+  }
+},
+{
+  "model": "teams.skill",
+  "pk": 9,
+  "fields": {
+    "skill_name": "Java",
+    "skill_description": ""
+  }
+},
+{
+  "model": "teams.skill",
+  "pk": 10,
+  "fields": {
+    "skill_name": "React",
+    "skill_description": ""
+  }
+},
+{
+  "model": "teams.skill",
+  "pk": 11,
+  "fields": {
+    "skill_name": "Node.js",
+    "skill_description": ""
+  }
+},
+{
+  "model": "teams.skill",
+  "pk": 12,
+  "fields": {
+    "skill_name": "AWS",
+    "skill_description": ""
+  }
+},
+{
+  "model": "teams.skill",
+  "pk": 13,
+  "fields": {
+    "skill_name": "Docker",
+    "skill_description": ""
+  }
+},
+{
+  "model": "teams.skill",
+  "pk": 14,
+  "fields": {
+    "skill_name": "Kubernetes",
+    "skill_description": ""
+  }
+},
+{
+  "model": "teams.skill",
+  "pk": 15,
+  "fields": {
+    "skill_name": "SQL",
+    "skill_description": ""
+  }
+},
+{
+  "model": "teams.skill",
+  "pk": 16,
+  "fields": {
+    "skill_name": "Machine Learning",
+    "skill_description": ""
+  }
+},
+{
+  "model": "teams.skill",
+  "pk": 17,
+  "fields": {
+    "skill_name": "Data Engineering",
+    "skill_description": ""
+  }
+},
+{
+  "model": "teams.skill",
+  "pk": 18,
+  "fields": {
+    "skill_name": "Cybersecurity",
+    "skill_description": ""
+  }
+},
+{
+  "model": "teams.skill",
+  "pk": 19,
+  "fields": {
+    "skill_name": "DevOps",
+    "skill_description": ""
+  }
+},
+{
+  "model": "teams.skill",
+  "pk": 20,
+  "fields": {
+    "skill_name": "System Design",
+    "skill_description": ""
+  }
+},
+{
+  "model": "teams.team",
+  "pk": 1,
+  "fields": {
+    "department": 1,
+    "team_leader": 56,
+    "team_name": "Auth Team",
+    "mission": "To manage user identity and access securely across all systems.",
+    "description": "The Auth Team is responsible for login systems, authentication, and permissions. They ensure users can safely access the system while protecting sensitive data. Their work includes password management, token systems, and enforcing access control rules.",
+    "is_active": true,
+    "created_at": "2026-04-26T15:50:50.981Z",
+    "skills": [
+      3,
+      4,
+      5
+    ]
+  }
+},
+{
+  "model": "teams.team",
+  "pk": 2,
+  "fields": {
+    "department": 2,
+    "team_leader": 3,
+    "team_name": "Payments Team",
+    "mission": "To handle transactions securely and ensure reliable payment processing.",
+    "description": "The Payments Team manages all financial transactions within the system. They ensure payments are processed correctly and securely. Their work includes handling payment integrations, transaction validation, and supporting subscription services.",
+    "is_active": true,
+    "created_at": "2026-04-26T15:53:35.159Z",
+    "skills": [
+      1,
+      2,
+      3,
+      8
+    ]
+  }
+},
+{
+  "model": "teams.team",
+  "pk": 3,
+  "fields": {
+    "department": 3,
+    "team_leader": 50,
+    "team_name": "Mobile App Team",
+    "mission": "To build responsive and user-friendly mobile applications.",
+    "description": "The Mobile App Team develops and maintains mobile apps used by customers and internal teams. They focus on usability, performance, and integration with backend services. Their goal is to provide a smooth and reliable mobile experience.",
+    "is_active": true,
+    "created_at": "2026-04-26T15:55:25.082Z",
+    "skills": [
+      3,
+      6,
+      7
+    ]
+  }
+},
+{
+  "model": "teams.team",
+  "pk": 4,
+  "fields": {
+    "department": 4,
+    "team_leader": 11,
+    "team_name": "Data Platform Team",
+    "mission": "To provide a strong and reliable data infrastructure for storing and processing information.",
+    "description": "The Data Platform Team builds and maintains data pipelines and storage systems. They make sure data is clean, organised, and accessible for other teams. Their work supports analytics, reporting, and machine learning across the organisation.",
+    "is_active": true,
+    "created_at": "2026-04-26T21:34:05.145Z",
+    "skills": [
+      1,
+      15,
+      17
+    ]
+  }
+},
+{
+  "model": "teams.team",
+  "pk": 5,
+  "fields": {
+    "department": 4,
+    "team_leader": 8,
+    "team_name": "AI Insights Team",
+    "mission": "To develop intelligent solutions using machine learning that helps teams make better data-driven decisions.",
+    "description": "The AI Insights Team focuses on building models that analyse data and generate useful predictions or recommendations. They work closely with data and analytics teams to ensure models are accurate and relevant. Their work supports areas such as customer behaviour analysis, automation, and performance optimisation.",
+    "is_active": true,
+    "created_at": "2026-04-26T21:36:44.708Z",
+    "skills": [
+      1,
+      16
+    ]
+  }
+},
+{
+  "model": "teams.team",
+  "pk": 6,
+  "fields": {
+    "department": 1,
+    "team_leader": 68,
+    "team_name": "DevOps Team",
+    "mission": "To improve the speed and reliability of software delivery through automation and system monitoring.",
+    "description": "The DevOps Team works on deployment pipelines, infrastructure automation, and system performance. They help developers release updates smoothly and ensure systems remain stable. Their work reduces downtime and improves overall efficiency.",
+    "is_active": true,
+    "created_at": "2026-04-26T21:39:34.640Z",
+    "skills": [
+      12,
+      13,
+      14,
+      19
+    ]
+  }
+},
+{
+  "model": "teams.team",
+  "pk": 7,
+  "fields": {
+    "department": 5,
+    "team_leader": 9,
+    "team_name": "Security Team",
+    "mission": "To protect systems and data from security threats and vulnerabilities.",
+    "description": "The Security Team monitors systems for risks and ensures security standards are followed. They work with other teams to fix vulnerabilities and respond to incidents. Their role is essential in keeping data and services safe.",
+    "is_active": true,
+    "created_at": "2026-04-26T21:41:26.697Z",
+    "skills": [
+      18
+    ]
+  }
+},
+{
+  "model": "teams.team",
+  "pk": 8,
+  "fields": {
+    "department": 1,
+    "team_leader": 61,
+    "team_name": "API Gateway Team",
+    "mission": "To ensure smooth, secure, and efficient communication between all services through a central API layer.",
+    "description": "The API Gateway Team manages how different systems connect and communicate. They handle request routing, security, and performance optimisation. Their role is important in making sure applications can reliably interact with backend services without delays or failures.",
+    "is_active": true,
+    "created_at": "2026-04-26T21:44:12.120Z",
+    "skills": [
+      3,
+      20
+    ]
+  }
+},
+{
+  "model": "teams.team",
+  "pk": 9,
+  "fields": {
+    "department": 4,
+    "team_leader": 6,
+    "team_name": "Analytics Engineering Team",
+    "mission": "To turn raw data into useful insights that support decision-making.",
+    "description": "The Analytics Engineering Team prepares and structures data for reporting and analysis. They build dashboards and data models that help teams understand performance and trends. Their work helps the business make informed decisions.",
+    "is_active": true,
+    "created_at": "2026-04-28T00:39:13.360Z",
+    "skills": [
+      1,
+      15,
+      17,
+      20
+    ]
+  }
+},
+{
+  "model": "teams.team",
+  "pk": 10,
+  "fields": {
+    "department": 1,
+    "team_leader": 2,
+    "team_name": "Cloud Infrastructure Team",
+    "mission": "To provide scalable and reliable cloud environments for all services",
+    "description": "The Cloud Infrastructure Team manages cloud resources and ensures systems run efficiently. They focus on availability, scalability, and cost management. Their work supports all other teams by providing a stable environment",
+    "is_active": true,
+    "created_at": "2026-04-28T00:42:19.258Z",
+    "skills": [
+      12,
+      13,
+      14,
+      19
+    ]
+  }
+},
+{
+  "model": "teams.team",
+  "pk": 11,
+  "fields": {
+    "department": 2,
+    "team_leader": 3,
+    "team_name": "Billing & Subscriptions Team",
+    "mission": "To manage billing processes and subscription services accurately and efficiently.",
+    "description": "The Billing & Subscriptions Team handles user subscriptions, invoices, and billing systems. They ensure that payments are tracked correctly and users are billed properly. Their work supports both customer experience and financial operations.",
+    "is_active": true,
+    "created_at": "2026-04-28T00:44:25.198Z",
+    "skills": [
+      3,
+      8,
+      9,
+      15
+    ]
+  }
+},
+{
+  "model": "teams.team",
+  "pk": 12,
+  "fields": {
+    "department": 5,
+    "team_leader": 9,
+    "team_name": "Threat Intelligence Team",
+    "mission": "To identify and analyse potential security threats before they impact the system",
+    "description": "The Threat Intelligence Team monitors risks and studies potential vulnerabilities. They provide insights to improve security and prevent attacks. Their work is proactive, helping the organisation stay ahead of threats",
+    "is_active": true,
+    "created_at": "2026-04-28T00:46:36.357Z",
+    "skills": [
+      1,
+      3,
+      18,
+      20
+    ]
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 1,
+  "fields": {
+    "team": 5,
+    "user": 8,
+    "role_in_team": "Machine Learning Lead"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 2,
+  "fields": {
+    "team": 5,
+    "user": 13,
+    "role_in_team": "Senior Machine Learning Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 3,
+  "fields": {
+    "team": 5,
+    "user": 14,
+    "role_in_team": "Data Scientist"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 4,
+  "fields": {
+    "team": 5,
+    "user": 15,
+    "role_in_team": "Machine Learning Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 5,
+  "fields": {
+    "team": 5,
+    "user": 16,
+    "role_in_team": "AI Research Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 6,
+  "fields": {
+    "team": 5,
+    "user": 17,
+    "role_in_team": "Junior Data Scientist"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 7,
+  "fields": {
+    "team": 9,
+    "user": 6,
+    "role_in_team": "Analytics Lead"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 8,
+  "fields": {
+    "team": 9,
+    "user": 9,
+    "role_in_team": "Senior Data Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 9,
+  "fields": {
+    "team": 9,
+    "user": 27,
+    "role_in_team": "Data Analyst"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 10,
+  "fields": {
+    "team": 9,
+    "user": 18,
+    "role_in_team": "Analytics Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 11,
+  "fields": {
+    "team": 9,
+    "user": 19,
+    "role_in_team": "BI Developer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 12,
+  "fields": {
+    "team": 9,
+    "user": 20,
+    "role_in_team": "Junior Data Analyst"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 13,
+  "fields": {
+    "team": 4,
+    "user": 11,
+    "role_in_team": "Data Platform Lead"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 14,
+  "fields": {
+    "team": 4,
+    "user": 35,
+    "role_in_team": "Data Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 15,
+  "fields": {
+    "team": 4,
+    "user": 23,
+    "role_in_team": "ETL Developer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 16,
+  "fields": {
+    "team": 4,
+    "user": 22,
+    "role_in_team": "Data Quality Analyst"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 17,
+  "fields": {
+    "team": 4,
+    "user": 21,
+    "role_in_team": "Junior Data Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 18,
+  "fields": {
+    "team": 12,
+    "user": 13,
+    "role_in_team": "Threat intelligence Lead"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 19,
+  "fields": {
+    "team": 12,
+    "user": 25,
+    "role_in_team": "Threat Analyst"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 20,
+  "fields": {
+    "team": 12,
+    "user": 29,
+    "role_in_team": "Security Researcher"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 21,
+  "fields": {
+    "team": 12,
+    "user": 28,
+    "role_in_team": "Incident Response Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 22,
+  "fields": {
+    "team": 12,
+    "user": 26,
+    "role_in_team": "Junior Analyst"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 23,
+  "fields": {
+    "team": 7,
+    "user": 9,
+    "role_in_team": "Security Lead"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 24,
+  "fields": {
+    "team": 7,
+    "user": 33,
+    "role_in_team": "Cyber Security Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 25,
+  "fields": {
+    "team": 7,
+    "user": 32,
+    "role_in_team": "Security Analyst"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 26,
+  "fields": {
+    "team": 7,
+    "user": 21,
+    "role_in_team": "Network Security Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 27,
+  "fields": {
+    "team": 7,
+    "user": 31,
+    "role_in_team": "Threat Analyst"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 28,
+  "fields": {
+    "team": 7,
+    "user": 30,
+    "role_in_team": "Junior Security Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 29,
+  "fields": {
+    "team": 11,
+    "user": 43,
+    "role_in_team": "Billing Lead"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 30,
+  "fields": {
+    "team": 11,
+    "user": 37,
+    "role_in_team": "Backend Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 31,
+  "fields": {
+    "team": 11,
+    "user": 36,
+    "role_in_team": "Subscription Systems Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 32,
+  "fields": {
+    "team": 11,
+    "user": 35,
+    "role_in_team": "Finance Systems Analyst"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 33,
+  "fields": {
+    "team": 11,
+    "user": 34,
+    "role_in_team": "Junior Analyst"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 34,
+  "fields": {
+    "team": 2,
+    "user": 3,
+    "role_in_team": "Payments Lead"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 35,
+  "fields": {
+    "team": 2,
+    "user": 38,
+    "role_in_team": "Senior Backend Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 36,
+  "fields": {
+    "team": 2,
+    "user": 39,
+    "role_in_team": "Payment Systems Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 37,
+  "fields": {
+    "team": 2,
+    "user": 40,
+    "role_in_team": "API Developer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 38,
+  "fields": {
+    "team": 2,
+    "user": 41,
+    "role_in_team": "Fraud Detection Analyst"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 39,
+  "fields": {
+    "team": 2,
+    "user": 42,
+    "role_in_team": "Junior Backend Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 40,
+  "fields": {
+    "team": 10,
+    "user": 44,
+    "role_in_team": "Infrastructure Lead"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 41,
+  "fields": {
+    "team": 10,
+    "user": 45,
+    "role_in_team": "Cloud Architect"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 42,
+  "fields": {
+    "team": 10,
+    "user": 49,
+    "role_in_team": "Cloud Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 43,
+  "fields": {
+    "team": 10,
+    "user": 48,
+    "role_in_team": "Infrastructure Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 44,
+  "fields": {
+    "team": 10,
+    "user": 47,
+    "role_in_team": "Systems Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 45,
+  "fields": {
+    "team": 10,
+    "user": 46,
+    "role_in_team": "Junior Cloud Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 46,
+  "fields": {
+    "team": 3,
+    "user": 50,
+    "role_in_team": "Mobile Lead"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 47,
+  "fields": {
+    "team": 3,
+    "user": 51,
+    "role_in_team": "Senior iOS Developer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 48,
+  "fields": {
+    "team": 3,
+    "user": 52,
+    "role_in_team": "Android Developer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 49,
+  "fields": {
+    "team": 3,
+    "user": 53,
+    "role_in_team": "Mobile UI Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 50,
+  "fields": {
+    "team": 3,
+    "user": 54,
+    "role_in_team": "Frontend Mobile Developer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 51,
+  "fields": {
+    "team": 3,
+    "user": 55,
+    "role_in_team": "Junior Mobile Developer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 52,
+  "fields": {
+    "team": 1,
+    "user": 56,
+    "role_in_team": "Security Lead"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 53,
+  "fields": {
+    "team": 1,
+    "user": 58,
+    "role_in_team": "Senior Security Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 54,
+  "fields": {
+    "team": 1,
+    "user": 59,
+    "role_in_team": "Backend Engineer (Auth Systems)"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 55,
+  "fields": {
+    "team": 1,
+    "user": 60,
+    "role_in_team": "Identity Management Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 56,
+  "fields": {
+    "team": 1,
+    "user": 57,
+    "role_in_team": "Security Analyst"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 57,
+  "fields": {
+    "team": 1,
+    "user": 14,
+    "role_in_team": "Junior Backend Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 58,
+  "fields": {
+    "team": 8,
+    "user": 61,
+    "role_in_team": "Platform Lead"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 59,
+  "fields": {
+    "team": 8,
+    "user": 62,
+    "role_in_team": "Senior Backend Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 60,
+  "fields": {
+    "team": 8,
+    "user": 65,
+    "role_in_team": "API Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 61,
+  "fields": {
+    "team": 8,
+    "user": 64,
+    "role_in_team": "Backend Developer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 62,
+  "fields": {
+    "team": 8,
+    "user": 66,
+    "role_in_team": "Integration Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 63,
+  "fields": {
+    "team": 8,
+    "user": 63,
+    "role_in_team": "Junior Backend Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 64,
+  "fields": {
+    "team": 6,
+    "user": 68,
+    "role_in_team": "DevOps Lead"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 65,
+  "fields": {
+    "team": 6,
+    "user": 70,
+    "role_in_team": "Senior DevOps Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 66,
+  "fields": {
+    "team": 6,
+    "user": 71,
+    "role_in_team": "Cloud Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 67,
+  "fields": {
+    "team": 6,
+    "user": 69,
+    "role_in_team": "CI/CD Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 68,
+  "fields": {
+    "team": 6,
+    "user": 72,
+    "role_in_team": "Site Reliability Engineer"
+  }
+},
+{
+  "model": "teams.teammember",
+  "pk": 69,
+  "fields": {
+    "team": 6,
+    "user": 67,
+    "role_in_team": "Junior DevOps Engineer"
+  }
+},
+{
+  "model": "teams.dependency",
+  "pk": 1,
+  "fields": {
+    "source_team": 2,
+    "target_team": 1,
+    "dependency_type": "Authentication Service",
+    "description": "Payments Team depends on Auth Team for secure login and token validation."
+  }
+},
+{
+  "model": "teams.dependency",
+  "pk": 2,
+  "fields": {
+    "source_team": 3,
+    "target_team": 2,
+    "dependency_type": "Payment Integration",
+    "description": "Mobile App Team depends on Payments Team for checkout and transaction processing."
+  }
+},
+{
+  "model": "teams.dependency",
+  "pk": 3,
+  "fields": {
+    "source_team": 3,
+    "target_team": 8,
+    "dependency_type": "API Integration",
+    "description": "Mobile applications communicate with backend services through the API Gateway, which manages routing, authentication, and request handling."
+  }
+},
+{
+  "model": "teams.dependency",
+  "pk": 4,
+  "fields": {
+    "source_team": 5,
+    "target_team": 4,
+    "dependency_type": "Data Pipeline",
+    "description": "AI models depend on structured and processed datasets provided by the Data Platform Team for training and inference."
+  }
+},
+{
+  "model": "teams.dependency",
+  "pk": 5,
+  "fields": {
+    "source_team": 6,
+    "target_team": 1,
+    "dependency_type": "Infrastructure Support",
+    "description": "DevOps provides CI/CD pipelines, deployment automation, and cloud infrastructure support for authentication services."
+  }
+},
+{
+  "model": "teams.dependency",
+  "pk": 6,
+  "fields": {
+    "source_team": 6,
+    "target_team": 8,
+    "dependency_type": "Infrastructure Support",
+    "description": "Ensures API Gateway services are deployed, monitored, and scaled reliably across environments."
+  }
+},
+{
+  "model": "teams.dependency",
+  "pk": 7,
+  "fields": {
+    "source_team": 2,
+    "target_team": 4,
+    "dependency_type": "Data Analytics",
+    "description": "Transaction data is sent to the Data Platform for analytics, reporting, and fraud detection model improvements."
+  }
+},
+{
+  "model": "teams.dependency",
+  "pk": 8,
+  "fields": {
+    "source_team": 7,
+    "target_team": 2,
+    "dependency_type": "Security Monitoring",
+    "description": "Security Team monitors payment systems for vulnerabilities, fraud risks, and compliance with security standards."
+  }
+},
+{
+  "model": "teams.dependency",
+  "pk": 9,
+  "fields": {
+    "source_team": 7,
+    "target_team": 1,
+    "dependency_type": "Security Compliance",
+    "description": "Ensures authentication mechanisms follow security best practices, including encryption, token security, and access control."
+  }
+},
+{
+  "model": "teams.dependency",
+  "pk": 10,
+  "fields": {
+    "source_team": 3,
+    "target_team": 1,
+    "dependency_type": "Authentication",
+    "description": "Mobile applications depend on Auth services for user login, session management, and secure access."
+  }
+},
+{
+  "model": "teams.dependency",
+  "pk": 11,
+  "fields": {
+    "source_team": 8,
+    "target_team": 1,
+    "dependency_type": "Authorization",
+    "description": "API Gateway relies on Auth Team to validate incoming requests and enforce access control policies."
+  }
+},
+{
+  "model": "teams.dependency",
+  "pk": 12,
+  "fields": {
+    "source_team": 10,
+    "target_team": 6,
+    "dependency_type": "infrastructure",
+    "description": "DevOps relies on cloud infrastructure support for deployment environments and platform stability."
+  }
+},
+{
+  "model": "teams.dependency",
+  "pk": 13,
+  "fields": {
+    "source_team": 9,
+    "target_team": 4,
+    "dependency_type": "deployment",
+    "description": "Analytics Engineering depends on Data Platform for clean datasets and warehouse pipelines."
+  }
+},
+{
+  "model": "teams.dependency",
+  "pk": 14,
+  "fields": {
+    "source_team": 12,
+    "target_team": 7,
+    "dependency_type": "security",
+    "description": "Threat Intelligence shares risk findings with the Security Team for monitoring and response."
+  }
+},
+{
+  "model": "teams.dependency",
+  "pk": 15,
+  "fields": {
+    "source_team": 11,
+    "target_team": 2,
+    "dependency_type": "other",
+    "description": "Billing depends on Payments for transaction processing and subscription payment status."
+  }
+},
+{
+  "model": "teams.dependency",
+  "pk": 16,
+  "fields": {
+    "source_team": 8,
+    "target_team": 10,
+    "dependency_type": "deployment",
+    "description": "API Gateway depends on cloud infrastructure for hosting, scaling and deployment."
+  }
+},
+{
+  "model": "teams.dependency",
+  "pk": 17,
+  "fields": {
+    "source_team": 4,
+    "target_team": 10,
+    "dependency_type": "infrastructure",
+    "description": "Data Platform relies on cloud infrastructure for storage, pipelines and compute resources."
+  }
+},
+{
+  "model": "teams.dependency",
+  "pk": 18,
+  "fields": {
+    "source_team": 1,
+    "target_team": 7,
+    "dependency_type": "security",
+    "description": "Auth Team works with Security to review access control and identity-related risks."
+  }
+},
+{
+  "model": "teams.dependency",
+  "pk": 19,
+  "fields": {
+    "source_team": 2,
+    "target_team": 12,
+    "dependency_type": "security",
+    "description": "Payments depends on threat intelligence updates to identify fraud and security risks."
+  }
+},
+{
+  "model": "teams.dependency",
+  "pk": 20,
+  "fields": {
+    "source_team": 9,
+    "target_team": 5,
+    "dependency_type": "other",
+    "description": "AI Insights uses analytics outputs to support model reporting and performance reviews."
+  }
+},
+{
+  "model": "teams.contactchannel",
+  "pk": 1,
+  "fields": {
+    "team": 1,
+    "channel_type": "email",
+    "channel_value": "auth@sky.com"
+  }
+},
+{
+  "model": "teams.contactchannel",
+  "pk": 2,
+  "fields": {
+    "team": 2,
+    "channel_type": "email",
+    "channel_value": "payments@sky.com"
+  }
+},
+{
+  "model": "teams.contactchannel",
+  "pk": 3,
+  "fields": {
+    "team": 3,
+    "channel_type": "email",
+    "channel_value": "mobile@sky.com"
+  }
+},
+{
+  "model": "teams.contactchannel",
+  "pk": 4,
+  "fields": {
+    "team": 4,
+    "channel_type": "email",
+    "channel_value": "data@sky.com"
+  }
+},
+{
+  "model": "teams.contactchannel",
+  "pk": 5,
+  "fields": {
+    "team": 5,
+    "channel_type": "email",
+    "channel_value": "ai@sky.com"
+  }
+},
+{
+  "model": "teams.contactchannel",
+  "pk": 6,
+  "fields": {
+    "team": 6,
+    "channel_type": "email",
+    "channel_value": "devops@sky.com"
+  }
+},
+{
+  "model": "teams.contactchannel",
+  "pk": 7,
+  "fields": {
+    "team": 7,
+    "channel_type": "email",
+    "channel_value": "security@sky.com"
+  }
+},
+{
+  "model": "teams.contactchannel",
+  "pk": 8,
+  "fields": {
+    "team": 8,
+    "channel_type": "email",
+    "channel_value": "api@sky.com"
+  }
+},
+{
+  "model": "teams.contactchannel",
+  "pk": 9,
+  "fields": {
+    "team": 9,
+    "channel_type": "email",
+    "channel_value": "analytics@sky.com"
+  }
+},
+{
+  "model": "teams.contactchannel",
+  "pk": 10,
+  "fields": {
+    "team": 10,
+    "channel_type": "email",
+    "channel_value": "cloudinfra@sky.com"
+  }
+},
+{
+  "model": "teams.contactchannel",
+  "pk": 11,
+  "fields": {
+    "team": 11,
+    "channel_type": "email",
+    "channel_value": "billing@sky.com"
+  }
+},
+{
+  "model": "teams.contactchannel",
+  "pk": 12,
+  "fields": {
+    "team": 12,
+    "channel_type": "email",
+    "channel_value": "threatintel@sky.com"
+  }
+},
+{
+  "model": "teams.teamchannel",
+  "pk": 1,
+  "fields": {
+    "team": 1,
+    "channel_name": "auth-team",
+    "platform": "Slack",
+    "channel_link": "https://slack.com/sky/auth-team"
+  }
+},
+{
+  "model": "teams.teamchannel",
+  "pk": 2,
+  "fields": {
+    "team": 2,
+    "channel_name": "payments-team",
+    "platform": "Slack",
+    "channel_link": "https://slack.com/payments-team"
+  }
+},
+{
+  "model": "teams.teamchannel",
+  "pk": 3,
+  "fields": {
+    "team": 3,
+    "channel_name": "mobile-team",
+    "platform": "Microsoft Teams",
+    "channel_link": "https://teams.microsoft.com/mobile-team"
+  }
+},
+{
+  "model": "teams.teamchannel",
+  "pk": 4,
+  "fields": {
+    "team": 4,
+    "channel_name": "Data Engineering",
+    "platform": "Slack",
+    "channel_link": "https://slack.com/data-team"
+  }
+},
+{
+  "model": "teams.teamchannel",
+  "pk": 5,
+  "fields": {
+    "team": 5,
+    "channel_name": "AI Lab",
+    "platform": "Microsoft Teams",
+    "channel_link": "https://teams.microsoft.com/ai-team"
+  }
+},
+{
+  "model": "teams.teamchannel",
+  "pk": 6,
+  "fields": {
+    "team": 6,
+    "channel_name": "DevOps Hub",
+    "platform": "Slack",
+    "channel_link": "https://slack.com/devops-team"
+  }
+},
+{
+  "model": "teams.teamchannel",
+  "pk": 7,
+  "fields": {
+    "team": 7,
+    "channel_name": "Security Ops",
+    "platform": "Microsoft Teams",
+    "channel_link": "https://teams.microsoft.com/security-team"
+  }
+},
+{
+  "model": "teams.teamchannel",
+  "pk": 8,
+  "fields": {
+    "team": 8,
+    "channel_name": "API Platform",
+    "platform": "Slack",
+    "channel_link": "https://slack.com/api-team"
+  }
+},
+{
+  "model": "teams.teamchannel",
+  "pk": 9,
+  "fields": {
+    "team": 9,
+    "channel_name": "Analytics Engineering",
+    "platform": "Microsoft Teams",
+    "channel_link": "https://teams.microsoft.com/analytics-engineering"
+  }
+},
+{
+  "model": "teams.teamchannel",
+  "pk": 10,
+  "fields": {
+    "team": 10,
+    "channel_name": "Cloud Infrastructure",
+    "platform": "Slack",
+    "channel_link": "https://slack.com/cloud-infrastructure"
+  }
+},
+{
+  "model": "teams.teamchannel",
+  "pk": 11,
+  "fields": {
+    "team": 11,
+    "channel_name": "Billing & Subscriptions",
+    "platform": "Microsoft Teams",
+    "channel_link": "https://teams.microsoft.com/billing-subscriptions"
+  }
+},
+{
+  "model": "teams.teamchannel",
+  "pk": 12,
+  "fields": {
+    "team": 12,
+    "channel_name": "Threat Intelligence",
+    "platform": "Slack",
+    "channel_link": "https://slack.com/threat-intelligence"
+  }
+},
+{
+  "model": "teams.repository",
+  "pk": 1,
+  "fields": {
+    "team": 1,
+    "repo_name": "auth-service",
+    "repo_url": "https://github.com/sky/auth-service",
+    "repo_description": "Authentication and SSO Service"
+  }
+},
+{
+  "model": "teams.repository",
+  "pk": 2,
+  "fields": {
+    "team": 2,
+    "repo_name": "payments-service",
+    "repo_url": "https://github.com/sky/payments-service",
+    "repo_description": "Payment processing service."
+  }
+},
+{
+  "model": "teams.repository",
+  "pk": 3,
+  "fields": {
+    "team": 3,
+    "repo_name": "mobile-app",
+    "repo_url": "https://github.com/sky/mobile-app",
+    "repo_description": "Mobile app interface and SDK integration."
+  }
+},
+{
+  "model": "teams.repository",
+  "pk": 4,
+  "fields": {
+    "team": 4,
+    "repo_name": "data-platform",
+    "repo_url": "https://github.com/sky/data-platform",
+    "repo_description": "Data pipelines, ETL processing, and warehouse management"
+  }
+},
+{
+  "model": "teams.repository",
+  "pk": 5,
+  "fields": {
+    "team": 5,
+    "repo_name": "ai-models",
+    "repo_url": "https://github.com/sky/ai-models",
+    "repo_description": "Machine learning models and recommendation systems"
+  }
+},
+{
+  "model": "teams.repository",
+  "pk": 6,
+  "fields": {
+    "team": 6,
+    "repo_name": "devops-infra",
+    "repo_url": "https://github.com/sky/devops-infra",
+    "repo_description": "Infrastructure as code, CI/CD pipelines, and deployments"
+  }
+},
+{
+  "model": "teams.repository",
+  "pk": 7,
+  "fields": {
+    "team": 7,
+    "repo_name": "security-monitoring",
+    "repo_url": "https://github.com/sky/security-monitoring",
+    "repo_description": "Threat detection, vulnerability scanning, and monitoring tools"
+  }
+},
+{
+  "model": "teams.repository",
+  "pk": 8,
+  "fields": {
+    "team": 8,
+    "repo_name": "api-gateway",
+    "repo_url": "https://github.com/sky/api-gateway",
+    "repo_description": "API routing, gateway management, and traffic control"
+  }
+},
+{
+  "model": "teams.repository",
+  "pk": 9,
+  "fields": {
+    "team": 9,
+    "repo_name": "analytics-engineering",
+    "repo_url": "https://github.com/sky/analytics-engineering",
+    "repo_description": "Analytics models, reporting pipelines and structured business datasets."
+  }
+},
+{
+  "model": "teams.repository",
+  "pk": 10,
+  "fields": {
+    "team": 10,
+    "repo_name": "cloud-infrastructure",
+    "repo_url": "https://github.com/sky/cloud-infrastructure",
+    "repo_description": "Infrastructure-as-code, cloud configuration and deployment automation."
+  }
+},
+{
+  "model": "teams.repository",
+  "pk": 11,
+  "fields": {
+    "team": 11,
+    "repo_name": "billing-subscriptions",
+    "repo_url": "https://github.com/sky/billing-subscriptions",
+    "repo_description": "Billing workflows, subscription services and payment lifecycle logic."
+  }
+},
+{
+  "model": "teams.repository",
+  "pk": 12,
+  "fields": {
+    "team": 12,
+    "repo_name": "threat-intelligence",
+    "repo_url": "https://github.com/sky/threat-intelligence",
+    "repo_description": "Threat monitoring tools, detection rules and incident response resources."
+  }
+},
+{
+  "model": "teams.meeting",
+  "pk": 2,
+  "fields": {
+    "team": 1,
+    "scheduled_by": 1,
+    "date_time": "2026-05-17T10:00:00Z",
+    "platform": "Microsoft Teams",
+    "meeting_link": "https://teams.microsoft.com/l/meetup-join/auth-team-sync",
+    "message": "Weekly sync meeting to review authentication services, discuss ongoing issues, and align on upcoming feature releases.",
+    "status": "Scheduled"
+  }
+},
+{
+  "model": "teams.meeting",
+  "pk": 3,
+  "fields": {
+    "team": 2,
+    "scheduled_by": 3,
+    "date_time": "2026-04-12T12:00:00Z",
+    "platform": "Zoom",
+    "meeting_link": "https://zoom.us/j/987654321",
+    "message": "Discussion on transaction flow improvements, payment gateway updates, and issue tracking.",
+    "status": "Scheduled"
+  }
+},
+{
+  "model": "teams.meeting",
+  "pk": 5,
+  "fields": {
+    "team": 4,
+    "scheduled_by": 7,
+    "date_time": "2026-04-12T16:00:00Z",
+    "platform": "Microsoft Teams",
+    "meeting_link": "https://teams.microsoft.com/platform-review",
+    "message": "Infrastructure scaling discussion and deployment pipeline optimisation.",
+    "status": "Scheduled"
+  }
+},
+{
+  "model": "teams.meeting",
+  "pk": 6,
+  "fields": {
+    "team": 3,
+    "scheduled_by": 3,
+    "date_time": "2026-04-22T13:30:00Z",
+    "platform": "Zoom",
+    "meeting_link": "https://zoom.us/mobile-sync",
+    "message": "Mobile performance improvements and bug tracking for upcoming release.",
+    "status": "Scheduled"
+  }
+},
+{
+  "model": "teams.meeting",
+  "pk": 7,
+  "fields": {
+    "team": 5,
+    "scheduled_by": 8,
+    "date_time": "2026-04-25T15:00:00Z",
+    "platform": "Zoom",
+    "meeting_link": "https://zoom.us/data-architecture",
+    "message": "Data pipeline optimisation and model deployment strategy discussion.",
+    "status": "Scheduled"
+  }
+},
+{
+  "model": "teams.meeting",
+  "pk": 8,
+  "fields": {
+    "team": 7,
+    "scheduled_by": 9,
+    "date_time": "2026-04-25T09:30:00Z",
+    "platform": "Microsoft Teams",
+    "meeting_link": "https://teams.microsoft.com/security-review",
+    "message": "Security audit review and incident response planning.",
+    "status": "Scheduled"
+  }
+}
+]

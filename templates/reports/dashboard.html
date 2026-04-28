@@ -1,0 +1,175 @@
+{% extends "base.html" %}
+
+{% block title %}Reports | Sky Engineering Portal{% endblock %}
+
+{% block content %}
+
+<!-- Main reports banner -->
+<div class="dashboard-hero">
+    <div>
+        <div class="hero-label">Reports Centre</div>
+        <h1>Engineering Reports & Insights</h1>
+        <p>
+            Review team counts, department summaries, dependencies and data quality checks
+            from one reporting workspace.
+        </p>
+
+        <a href="{% url 'reports:export_excel' %}" class="hero-btn">Export Excel</a>
+        <a href="{% url 'reports:export_pdf' %}" class="hero-btn">Export PDF</a>
+    </div>
+
+    <div class="hero-insight-card">
+        <p>Reporting Overview</p>
+        <h2>{{ stats.total_teams }}</h2>
+        <small>teams included in this report</small>
+    </div>
+</div>
+
+
+<!-- Report summary cards -->
+<div class="dashboard-grid">
+    <div class="stat-card">
+        <p>Total Teams</p>
+        <h2>{{ stats.total_teams }}</h2>
+        <small>Teams currently stored in the system</small>
+    </div>
+
+    <div class="stat-card">
+        <p>Departments</p>
+        <h2>{{ stats.total_departments }}</h2>
+        <small>Departments across the organisation</small>
+    </div>
+
+    <div class="stat-card">
+        <p>Dependencies</p>
+        <h2>{{ stats.total_dependencies }}</h2>
+        <small>Upstream and downstream links</small>
+    </div>
+
+    <div class="stat-card">
+        <p>Teams Without Managers</p>
+        <h2>{{ stats.teams_without_managers }}</h2>
+        <small>Teams needing leadership assignment</small>
+    </div>
+</div>
+
+
+<!-- Department summary table -->
+<div class="card">
+    <div class="card-title">Summary by Department</div>
+
+    <p>
+        This section gives a quick reporting summary of each department,
+        including team numbers, assigned managers, repositories and contact channels.
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Department</th>
+                <th>Department Head</th>
+                <th>Teams</th>
+                <th>Managers Assigned</th>
+                <th>Repositories</th>
+                <th>Contact Channels</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for row in summary_rows %}
+                <tr>
+                    <td>{{ row.department.department_name }}</td>
+
+                    <td>
+                        {% if row.department.department_head %}
+                            {{ row.department.department_head.first_name }}
+                            {{ row.department.department_head.last_name }}
+                        {% else %}
+                            Unassigned
+                        {% endif %}
+                    </td>
+
+                    <td>{{ row.team_count }}</td>
+                    <td>{{ row.manager_count }}</td>
+                    <td>{{ row.repository_count }}</td>
+                    <td>{{ row.contact_channel_count }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+<!-- Team count by department -->
+<div class="card">
+    <div class="card-title">Number of Teams by Department</div>
+
+    <p>
+        This report shows how teams are distributed across each department.
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Department</th>
+                <th>Department Head</th>
+                <th>Team Count</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for department in team_count_by_department %}
+                <tr>
+                    <td>{{ department.department_name }}</td>
+
+                    <td>
+                        {% if department.department_head %}
+                            {{ department.department_head.first_name }}
+                            {{ department.department_head.last_name }}
+                        {% else %}
+                            Unassigned
+                        {% endif %}
+                    </td>
+
+                    <td>{{ department.team_count }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+<!-- Teams without managers -->
+<div class="card">
+    <div class="card-title">Teams Without Managers</div>
+
+    <p>
+        This report highlights teams that do not currently have a team leader assigned.
+    </p>
+
+    {% if teams_without_managers %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Department</th>
+                    <th>Team</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for team in teams_without_managers %}
+                    <tr>
+                        <td>{{ team.department.department_name }}</td>
+                        <td>{{ team.team_name }}</td>
+                        <td>{% if team.is_active %}Active{% else %}Inactive{% endif %}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No unmanaged teams were found. All teams currently have a team leader assigned.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

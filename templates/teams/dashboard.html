@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="dashboard-hero">
+    <div>
+        <p class="hero-label">Sky Engineering Portal</p>
+        <h1>Welcome back, {{ user.first_name|default:user.username }}</h1>
+        <p>
+            Track engineering teams, collaboration channels, dependencies and upcoming meetings from one central workspace.
+        </p>
+        <a href="{% url 'teams_list' %}" class="hero-btn">Explore Teams</a>
+    </div>
+
+    <div class="hero-insight-card">
+        <p>Engineering Overview</p>
+        <h2>{{ total_teams }}</h2>
+        <span>active teams connected across {{ total_departments }} departments</span>
+    </div>
+</div>
+
+<div class="dashboard-grid">
+    <div class="stat-card">
+        <i data-lucide="users" class="stat-icon"></i>
+        <p>Total Teams</p>
+        <h2>{{ total_teams }}</h2>
+        <small>Active engineering teams</small>
+    </div>
+
+    <div class="stat-card">
+        <i data-lucide="building" class="stat-icon"></i>
+        <p>Departments</p>
+        <h2>{{ total_departments }}</h2>
+        <small>Business and engineering areas</small>
+    </div>
+
+    <div class="stat-card">
+        <i data-lucide="brain" class="stat-icon"></i>
+        <p>Skills</p>
+        <h2>{{ total_skills }}</h2>
+        <small>Technical capabilities tracked</small>
+    </div>
+
+    <div class="stat-card">
+        <i data-lucide="calendar" class="stat-icon"></i>
+        <p>Upcoming Meetings</p>
+        <h2>{{ upcoming_meetings|length }}</h2>
+        <small>Scheduled collaboration sessions</small>
+    </div>
+</div>
+
+<div class="dashboard-charts">
+    
+    <div class="card">
+        <div class="card-title">Teams by Department</div>
+        <canvas id="teamsChart"></canvas>
+    </div>
+
+    <div class="card">
+        <div class="card-title">Meetings Timeline</div>
+        <canvas id="meetingsChart"></canvas>
+    </div>
+
+</div>
+
+<div class="dashboard-single-column">
+    <div class="card">
+        <div class="card-title">Upcoming Meetings</div>
+
+        {% if upcoming_meetings %}
+            {% for meeting in upcoming_meetings %}
+                <div class="meeting-item">
+                    <div>
+                        <strong>{{ meeting.team.team_name }}</strong>
+                        <p>{{ meeting.message|default:"No meeting description added." }}</p>
+                    </div>
+                    <span>{{ meeting.date_time|date:"d M, H:i" }}</span>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No meetings scheduled yet.</p>
+        {% endif %}
+    </div>
+</div>
+
+{{ dept_labels|json_script:"dept-labels" }}
+{{ dept_counts|json_script:"dept-counts" }}
+{{ meeting_labels|json_script:"meeting-labels" }}
+{{ meeting_counts|json_script:"meeting-counts" }}
+
+
+<script>
+const deptLabels = JSON.parse(document.getElementById('dept-labels').textContent);
+const deptCounts = JSON.parse(document.getElementById('dept-counts').textContent);
+const meetingLabels = JSON.parse(document.getElementById('meeting-labels').textContent);
+const meetingCounts = JSON.parse(document.getElementById('meeting-counts').textContent);
+
+new Chart(document.getElementById('teamsChart'), {
+    type: 'bar',
+    data: {
+        labels: deptLabels,
+        datasets: [{
+            label: 'Teams',
+            data: deptCounts,
+            backgroundColor: '#006cff',
+            borderColor: '#006cff',
+            borderWidth: 2,
+            borderRadius: 8
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: { display: false }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                ticks: {
+                    stepSize: 1,
+                    precision: 0
+                }
+            }
+        }
+    }
+});
+
+const ctx = document.getElementById('meetingsChart').getContext('2d');
+
+const gradient = ctx.createLinearGradient(0, 0, 0, 300);
+gradient.addColorStop(0, 'rgba(0, 115, 255, 0.5)');   // Sky blue
+gradient.addColorStop(1, 'rgba(120, 0, 255, 0.1)');   // Purple fade
+
+new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: meetingLabels,
+        datasets: [{
+            label: 'Meetings',
+            data: meetingCounts,
+            borderColor: '#0073ff',
+            backgroundColor: gradient,
+            fill: true,
+            tension: 0.4,
+            pointBackgroundColor: '#0073ff'
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: { display: false }
+        },
+        scales: {
+            y: {
+                ticks: {
+                    stepSize: 1,
+                    precision: 0
+                }
+            }
+        }
+    }
+});
+</script>
+
+
+{% endblock %}
+

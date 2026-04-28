@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Sky Engineering Portal{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #132238;
+            --sky: #dbe7f3;
+            --accent: #175ea8;
+            --accent-strong: #0d3f73;
+            --paper: #f7fbff;
+            --card: rgba(255, 255, 255, 0.9);
+            --shadow: 0 20px 50px rgba(19, 34, 56, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Manrope", sans-serif;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at top left, rgba(23, 94, 168, 0.20), transparent 28%),
+                radial-gradient(circle at bottom right, rgba(11, 83, 148, 0.16), transparent 24%),
+                linear-gradient(180deg, #eef5fb 0%, #f8fbfe 100%);
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .shell {
+            min-height: 100vh;
+            padding: 32px 20px 48px;
+        }
+
+        .frame {
+            max-width: 1180px;
+            margin: 0 auto;
+            background: rgba(247, 251, 255, 0.76);
+            border: 1px solid rgba(19, 34, 56, 0.08);
+            border-radius: 28px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            backdrop-filter: blur(12px);
+        }
+
+        .masthead {
+            padding: 28px 32px;
+            background: linear-gradient(135deg, #16365f 0%, #1a5b9a 100%);
+            color: white;
+        }
+
+        .masthead h1 {
+            margin: 0;
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            letter-spacing: -0.03em;
+        }
+
+        .masthead p {
+            margin: 10px 0 0;
+            max-width: 760px;
+            color: rgba(255, 255, 255, 0.86);
+        }
+
+        .nav {
+            display: flex;
+            gap: 12px;
+            padding: 18px 32px 0;
+            flex-wrap: wrap;
+        }
+
+        .nav a {
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 999px;
+            background: rgba(19, 34, 56, 0.06);
+            font-weight: 700;
+        }
+
+        .nav a.active {
+            background: var(--accent);
+            color: white;
+        }
+
+        .content {
+            padding: 28px 32px 36px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+
+        .card,
+        .panel {
+            background: var(--card);
+            border: 1px solid rgba(19, 34, 56, 0.08);
+            border-radius: 22px;
+            box-shadow: 0 8px 24px rgba(19, 34, 56, 0.08);
+        }
+
+        .card {
+            padding: 22px;
+        }
+
+        .card .eyebrow {
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #57718f;
+            margin-bottom: 8px;
+        }
+
+        .card .value {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+        }
+
+        .panel {
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 18px;
+        }
+
+        .panel h2 {
+            margin: 0;
+            font-size: 1.25rem;
+        }
+
+        .btn-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 16px;
+            border-radius: 14px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .btn.secondary {
+            background: rgba(23, 94, 168, 0.10);
+            color: var(--accent-strong);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 14px 12px;
+            text-align: left;
+            border-bottom: 1px solid rgba(19, 34, 56, 0.08);
+            vertical-align: top;
+        }
+
+        th {
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #57718f;
+        }
+
+        .empty-state {
+            padding: 18px;
+            border-radius: 18px;
+            background: rgba(23, 94, 168, 0.06);
+            color: #355575;
+        }
+
+        @media (max-width: 700px) {
+            .shell {
+                padding: 16px 10px 24px;
+            }
+
+            .masthead,
+            .content,
+            .nav {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="shell">
+        <div class="frame">
+            <header class="masthead">
+                <h1>Sky Engineering Portal</h1>
+                <p>A Django and SQLite prototype aligned to the coursework brief, using the supplied team registry as the seed dataset.</p>
+            </header>
+            <nav class="nav">
+                <a href="{% url 'reports:dashboard' %}" class="active">Reports</a>
+                <a href="/admin/">Admin</a>
+            </nav>
+            <main class="content">
+                {% block content %}{% endblock %}
+            </main>
+        </div>
+    </div>
+</body>
+</html>

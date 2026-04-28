@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sky Engineering - Register</title>
+  <link rel="stylesheet" href="{% static 'css/auth.css' %}" />
+</head>
+<body class="auth-page">
+  <div class="auth-card">
+    <div class="auth-content">
+
+      <div class="logo-container">
+        <img
+          src="{% static 'Sky_logo_2025.svg.png' %}"
+          alt="Sky Engineering Logo"
+          class="logo"
+        />
+      </div>
+
+      <p class="subtitle">Create your account</p>
+
+      {% if messages %}
+        {% for message in messages %}
+          <div class="message-box {{ message.tags }}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+
+      {% if form.non_field_errors %}
+        <div class="message-box error">
+          {{ form.non_field_errors|striptags }}
+        </div>
+      {% endif %}
+
+      <form method="POST">
+        {% csrf_token %}
+
+        <div class="form-group">
+          <label for="id_first_name">First Name</label>
+          <input
+            type="text"
+            name="first_name"
+            id="id_first_name"
+            value="{{ form.first_name.value|default:'' }}"
+          />
+          {% if form.first_name.errors %}
+            <small class="error-text">{{ form.first_name.errors|striptags }}</small>
+          {% endif %}
+        </div>
+
+        <div class="form-group">
+          <label for="id_last_name">Last Name</label>
+          <input
+            type="text"
+            name="last_name"
+            id="id_last_name"
+            value="{{ form.last_name.value|default:'' }}"
+          />
+          {% if form.last_name.errors %}
+            <small class="error-text">{{ form.last_name.errors|striptags }}</small>
+          {% endif %}
+        </div>
+
+        <div class="form-group">
+          <label for="id_username">Username</label>
+          <input
+            type="text"
+            name="username"
+            id="id_username"
+            value="{{ form.username.value|default:'' }}"
+            required
+          />
+          {% if form.username.errors %}
+            <small class="error-text">{{ form.username.errors|striptags }}</small>
+          {% endif %}
+        </div>
+
+        <div class="form-group">
+          <label for="id_email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="id_email"
+            value="{{ form.email.value|default:'' }}"
+            required
+          />
+          <small class="password-hint">
+                Please use your Sky email address (must end with @sky.com).
+          </small>
+          {% if form.email.errors %}
+            <small class="error-text">{{ form.email.errors|striptags }}</small>
+          {% endif %}
+        </div>
+
+        <div class="form-group">
+          <label for="id_password1">Password</label>
+          <div class="password-wrapper">
+            <input
+              type="password"
+              name="password1"
+              id="id_password1"
+              required
+            />
+            <span class="toggle-password" onclick="togglePassword('id_password1', this)">Show</span>
+          </div>
+          <small class="password-hint">
+            Must be at least 8 characters, include uppercase, lowercase, number and special character.
+          </small>
+          {% if form.password1.errors %}
+            <small class="error-text">{{ form.password1.errors|striptags }}</small>
+          {% endif %}
+        </div>
+
+        <div class="form-group">
+          <label for="id_password2">Confirm Password</label>
+          <div class="password-wrapper">
+            <input
+              type="password"
+              name="password2"
+              id="id_password2"
+              required
+            />
+            <span class="toggle-password" onclick="togglePassword('id_password2', this)">Show</span>
+          </div>
+          {% if form.password2.errors %}
+            <small class="error-text">{{ form.password2.errors|striptags }}</small>
+          {% endif %}
+        </div>
+
+        <button type="submit" class="btn btn-gradient">Create Account</button>
+      </form>
+
+      <p class="switch-link">
+        Already have an account? <a href="{% url 'login' %}">Sign in</a>
+      </p>
+    </div>
+
+    <div class="card-footer">Sky Engineering © 2025</div>
+  </div>
+
+  <script src="{% static 'js/auth.js' %}"></script>
+</body>
+</html>

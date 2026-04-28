@@ -1,0 +1,183 @@
+/* =========================
+   AUTH PAGES ONLY
+   ========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body.auth-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #dfe7ee, #eef4f8);
+  padding: 24px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 390px;
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e8e8e8;
+}
+
+.auth-content {
+  padding: 26px 26px 24px;
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.logo {
+  display: block;
+  width: 180px;
+  max-width: 80%;
+  margin: 0 auto 16px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #596577;
+  margin-bottom: 28px;
+  font-size: 15px;
+}
+
+.message-box {
+  margin-bottom: 18px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.message-box.error {
+  background: #fff1f1;
+  color: #b42318;
+  border: 1px solid #f2c3c3;
+}
+
+.message-box.success {
+  background: #edf9f0;
+  color: #1d7a3b;
+  border: 1px solid #cde9d5;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #253041;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #dcdcdc;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+input:focus {
+  border-color: #3a6bf2;
+  box-shadow: 0 0 0 3px rgba(58, 107, 242, 0.12);
+}
+
+.error-text {
+  display: block;
+  color: #c62828;
+  font-size: 12px;
+  margin-top: 6px;
+  min-height: 14px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.password-hint {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #7a8797;
+  line-height: 1.4;
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.96;
+}
+
+.btn-blue {
+  background: #3b6df2;
+}
+
+.btn-gradient {
+  background: linear-gradient(90deg, #f4a54c, #f56d8b, #6f66f1);
+}
+
+.switch-link {
+  text-align: center;
+  font-size: 14px;
+  color: #5f6b7a;
+  margin-top: 18px;
+}
+
+.switch-link a {
+  text-decoration: none;
+  color: #2f66ff;
+  font-weight: 600;
+}
+
+.card-footer {
+  text-align: center;
+  padding: 18px;
+  border-top: 1px solid #eeeeee;
+  font-size: 13px;
+  color: #98a2ad;
+  background: #fafafa;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 60px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #3b6df2;
+  cursor: pointer;
+  font-weight: 600;
+}

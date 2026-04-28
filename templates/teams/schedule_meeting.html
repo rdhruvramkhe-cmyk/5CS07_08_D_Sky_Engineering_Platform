@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="schedule-page-hero">
+    <div>
+        <p class="hero-label">Schedule Collaboration</p>
+        <h1>Schedule Meeting</h1>
+        <p>Create a meeting request for <strong>{{ team.team_name }}</strong> and keep collaboration activity recorded in the portal.</p>
+    </div>
+
+    <div class="schedule-team-badge">
+        <span>Team</span>
+        <strong>{{ team.team_name }}</strong>
+    </div>
+</div>
+
+<div class="schedule-form-card">
+    <h2>Meeting Details</h2>
+
+    <form method="POST" action="{% url 'schedule_meeting' team.id %}" class="schedule-form">
+        {% csrf_token %}
+
+        <div class="form-grid">
+            <div class="form-field">
+                <label>Date & Time</label>
+                <input type="datetime-local" name="date_time" required>
+            </div>
+
+            <div class="form-field">
+                <label>Platform</label>
+                <input type="text" name="platform" placeholder="e.g. Microsoft Teams, Zoom" required>
+            </div>
+        </div>
+
+        <div class="form-field">
+            <label>Message</label>
+            <textarea name="message" placeholder="Add a short meeting purpose or agenda"></textarea>
+        </div>
+
+        <div class="form-actions">
+            <a href="{% url 'team_detail' team.id %}" class="btn btn-outline">Cancel</a>
+            <button type="submit" class="btn btn-primary">Create Meeting</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

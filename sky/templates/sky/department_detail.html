@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% comment %}
+  
+  Author: Hisham Suleman
+  Shows all teams within a specific department
+  URL: /departments/<id>/
+{% endcomment %}
+
+{% block nav_dept %}active{% endblock %}
+{% block title %}{{ department.department_name }} — Sky Engineering{% endblock %}
+
+{% block content %}
+
+{# back button and breadcrumb so users can navigate back without the browser button #}
+<div class="back-bar">
+    <a href="/departments/" class="back-btn">&larr; Departments</a>
+    <div class="breadcrumb">
+        <a href="/departments/">Departments</a>
+        &rsaquo;
+        <span>{{ department.department_name }}</span>
+    </div>
+</div>
+
+{# department header card showing name, description, head and team count #}
+<div class="detail-header">
+    <div class="card-tag">&#9632; Department</div>
+    <h1>{{ department.department_name }}</h1>
+    <p>{{ department.department_description }}</p>
+    <div class="detail-meta">
+        <div class="detail-meta-item">
+            <span class="label">Department Head</span>
+            {# falls back to 'Not assigned' if no head is set #}
+            <span class="value">{{ department.department_head.get_full_name|default:"Not assigned" }}</span>
+        </div>
+        <div class="detail-meta-item">
+            <span class="label">Total Teams</span>
+            <span class="value">{{ teams|length }}</span>
+        </div>
+    </div>
+</div>
+
+<div class="section-title">Teams in this department</div>
+
+{# loops through teams prefetched in the view — no extra queries here #}
+<div class="cards-grid">
+    {% for team in teams %}
+    <div class="card">
+        <div class="card-tag">&#9632; Team</div>
+        <div class="card-title">{{ team.team_name }}</div>
+        {# truncate mission to 90 chars to keep cards consistent height #}
+        <div class="card-desc">{{ team.mission|truncatechars:90 }}</div>
+        <div class="card-meta">
+            <div class="card-meta-row">
+                <span class="card-meta-label">Leader —</span>
+                <span class="card-meta-value">{{ team.team_leader.get_full_name|default:"Not assigned" }}</span>
+            </div>
+            <div class="card-meta-row">
+                <span class="card-meta-label">Members —</span>
+                <span class="card-meta-value">{{ team.members.count }}</span>
+            </div>
+        </div>
+        <div class="card-footer">
+            {# green badge if active, red if not #}
+            {% if team.is_active %}
+            <span class="badge badge-green">Active</span>
+            {% else %}
+            <span class="badge badge-red">Inactive</span>
+            {% endif %}
+            <a href="{% url 'team_detail' team.id %}" class="btn btn-primary">View Team &rarr;</a>
+        </div>
+    </div>
+    {% empty %}
+    {# shown when the department exists but has no teams yet #}
+    <div class="empty" style="grid-column: 1 / -1;">No teams in this department yet.</div>
+    {% endfor %}
+</div>
+
+{% endblock %}

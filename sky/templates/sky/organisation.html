@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block nav_org %}active{% endblock %}
+{% block title %}Organisation — Sky Engineering{% endblock %}
+
+{% block content %}
+
+<div class="dashboard-hero">
+    <div>
+        <div class="hero-label">Organisation Overview</div>
+        <h1>Understand the Structure, Instantly</h1>
+        <p>
+            Explore how departments, teams, and dependencies are connected across the organisation.
+            Gain a clear overview of engineering structure and collaboration flows.
+        </p>
+        <a href="/departments/" class="hero-btn">Explore Departments</a>
+    </div>
+
+    <div class="hero-insight-card">
+        <p>Organisation Overview</p>
+        <h2>{{ departments.count }}</h2>
+        <small>departments across the organisation</small>
+    </div>
+</div>
+
+
+<div class="stats-bar">
+    <div class="stat-pill">
+        <span class="stat-pill-value">{{ departments|length }}</span>
+        <span class="stat-pill-label">departments</span>
+    </div>
+    <div class="stat-pill">
+        <span class="stat-pill-value">{{ dependencies|length }}</span>
+        <span class="stat-pill-label">dependencies</span>
+    </div>
+</div>
+
+<div class="section-title">Department Overview</div>
+
+<div class="org-grid">
+    {% for dept in departments %}
+    <div class="org-card">
+        <div class="org-card-header">
+            <span>{{ dept.department_name }}</span>
+            <span class="badge badge-blue">{{ dept.teams.count }} teams</span>
+        </div>
+        <div class="org-card-body">
+            {% for team in dept.teams.all %}
+            <a href="/sky/teams/{{ team.id }}/" class="team-chip">{{ team.team_name }}</a>
+            {% empty %}
+            <span style="font-size: 0.75rem; color: var(--gray-500); font-family: 'DM Mono', monospace;">No teams</span>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="section-title" style="margin-top: 2rem;">Team Dependencies</div>
+
+{% if dependencies %}
+<div class="dep-list">
+    {% for dep in dependencies %}
+    <div class="dep-item">
+        <a href="/sky/teams/{{ dep.source_team.id }}/" style="color: var(--gray-900); text-decoration: none; font-weight: 500;">{{ dep.source_team.team_name }}</a>
+        <span class="dep-arrow">&rarr;</span>
+        <a href="/sky/teams/{{ dep.target_team.id }}/" style="color: var(--gray-900); text-decoration: none; font-weight: 500;">{{ dep.target_team.team_name }}</a>
+        <span class="badge badge-blue" style="margin-left: auto;">{{ dep.get_dependency_type_display }}</span>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<div class="empty">No dependencies recorded.</div>
+{% endif %}
+
+{% endblock %}

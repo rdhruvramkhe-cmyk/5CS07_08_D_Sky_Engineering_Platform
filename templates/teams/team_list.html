@@ -1,0 +1,176 @@
+<!--
+Author : Dhruv Ramkhalawon
+
+Description : This page displays the Teams Directory.
+Users can search for teams and filter them by department or skill.
+The results are shown as cards to make the page easier to read.
+
+-->
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!--Page Banner-->
+<div class="teams-hero">
+    <div>
+        <p class="hero-label">Teams Directory</p>
+        <h1>Find the Right Team, Fast</h1>
+        <p>
+            Explore engineering teams, discover capabilities, and connect with the right people across the organisation.
+        </p>
+    </div>
+</div>
+
+<!--Search and filter area-->
+<div class="search-card">
+    <div class="search-header">
+        <p class="hero-label">Search & Filter</p>
+        <h2>Find teams by name, department or skill</h2>
+    </div>
+
+    <!--GET method is used here so the search values appear in the URL. This makes it easier to reset, refresh
+    or share filtered results-->
+
+    <form method="get" class="team-search-form">
+
+        <!--Search Text Box-->
+        <div class="search-input-group search-wide">
+            <label for="q">Team / Leader / Description</label>
+            <input
+                type="text"
+                id="q"
+                name="q"
+                placeholder="Search e.g. DevOps, Cloud, David"
+                value="{{ query }}"
+            >
+        </div>
+
+        <!--Department Filter-->
+        <div class="search-input-group">
+            <label for="department">Department</label>
+            <select id="department" name="department">
+                <option value="">All departments</option>
+
+                {% for dept in departments %}
+                    <option value="{{ dept.id }}" {% if selected_department == dept.id|stringformat:"s" %}selected{% endif %}>
+                        {{ dept.department_name }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <!--Skill Filter-->
+        <div class="search-input-group">
+            <label for="skill">Skill</label>
+            <select id="skill" name="skill">
+                <option value="">All skills</option>
+
+                {% for skill_item in skills %}
+                    <option value="{{ skill_item.id }}" {% if selected_skill == skill_item.id|stringformat:"s" %}selected{% endif %}>
+                        {{ skill_item.skill_name }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <!--Form Buttons-->
+        <div class="search-buttons">
+            <button type="submit" class="btn btn-primary">Search</button>
+            <a href="{% url 'teams_list' %}" class="btn btn-outline">Reset</a>
+        </div>
+    </form>
+</div>
+
+<!--Results Heading-->
+<div class="teams-section-header">
+    <div>
+        <p class="hero-label">Available Teams</p>
+        <h2>Teams Directory</h2>
+    </div>
+
+    <div class="teams-count">
+        {{ teams|length }} teams found
+    </div>
+</div>
+
+<!--Team Cards-->
+{% if teams %}
+    <div class="teams-grid">
+
+        {% for team in teams %}
+            <div class="team-card">
+
+                <!--Team title and description-->
+                <div class="team-card-top">
+                    <div>
+                        <h3>{{ team.team_name }}</h3>
+                        <p class="team-desc">{{ team.description|default:"No description provided." }}</p>
+                    </div>
+                </div>
+
+
+                <!--Department and Leader-->
+                <div class="team-meta">
+                    <div>
+                        <span class="meta-label">Department</span>
+                        <strong>{{ team.department.department_name }}</strong>
+                    </div>
+
+                    <div>
+                        <span class="meta-label">Leader</span>
+
+                        <strong>
+                            {% if team.team_leader %}
+                                {{ team.team_leader.first_name }} {{ team.team_leader.last_name }}
+                            {% else %}
+                                Not assigned
+                            {% endif %}
+                        </strong>
+                    </div>
+                </div>
+
+                <!--Skills attached to the team-->
+                <div class="team-skills">
+                    {% for skill in team.skills.all %}
+                        <span class="tag">{{ skill.skill_name }}</span>
+                    {% empty %}
+                        <span class="text-muted">No skills</span>
+                    {% endfor %}
+                </div>
+
+                <!--Team email contact-->
+                <div class="team-contact">
+                    {% for contact in team.contact_channels.all %}
+
+                        {% if contact.channel_type|lower == "email" %}
+                            <div class="team-email">
+                                <span class="email-icon">✉</span>
+                                <a href="mailto:{{ contact.channel_value }}">{{ contact.channel_value }}</a>
+                            </div>
+                        {% endif %}
+
+                    {% empty %}
+                        <span class="text-muted">No contact added</span>
+                    {% endfor %}
+                </div>
+
+                <!--Main actions for each team-->
+                <div class="team-actions">
+                    <a href="{% url 'team_detail' team.id %}" class="btn btn-sky-red small-btn">Open</a>
+                    <a href="{% url 'schedule_meeting' team.id %}" class="btn btn-primary small-btn">Schedule</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+
+    <!--Message shown when no teams match the search/filter-->
+    <div class="card">
+        <p>No teams found matching your search.</p>
+    </div>
+{% endif %}
+
+
+{% endblock %}

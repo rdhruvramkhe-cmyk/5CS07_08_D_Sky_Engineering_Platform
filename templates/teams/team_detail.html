@@ -1,0 +1,257 @@
+<!--
+
+Author : Dhruv Ramkhalawon
+
+Description : This page displays the full profile of one engineering team.
+It shows the team overview, leader details, mission, skills and team members,
+repositiories, communication channels, dependencies and meeting action.
+
+-->
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!--Main Team Banner-->
+<div class="team-detail-hero">
+    <div>
+        <p class="hero-label">Team Profile</p>
+        <h1>{{ team.team_name }}</h1>
+        <p>{{ team.mission|default:"Team mission and engineering overview" }}</p>
+    </div>
+
+    <!--Department badge on the right side of the banner-->
+    <div class="team-detail-badge">
+        <span>Department</span>
+        <strong>{{ team.department.department_name }}</strong>
+    </div>
+</div>
+
+<!--Summary cards for quick team information-->
+<div class="team-overview-grid">
+
+    <!--Department Card-->
+    <div class="info-card">
+        <p class="info-label">Department</p>
+        <h3>{{ team.department.department_name }}</h3>
+    </div>
+
+    <!--Team Leader Card-->
+    <div class="info-card">
+        <p class="info-label">Team Leader</p>
+        
+        {% if team.team_leader %}
+            <h3>{{ team.team_leader.first_name }} {{ team.team_leader.last_name }}</h3>
+
+            <!--Leader email shown-->
+            <div class="team_leader-email">
+                <span class="email-icon">✉</span>
+                <a href="mailto:{{ team.team_leader.email }}">{{ team.team_leader.email }}</a>
+            </div>
+        {% endif %}
+    </div>
+
+    <!--Active/Inactive status-->
+    <div class="info-card">
+        <p class="info-label">Status</p>
+        <h3>{% if team.is_active %}Active{% else %}Inactive{% endif %}</h3>
+    </div>
+
+    <!--Date the team was created in the system-->
+    <div class="info-card">
+        <p class="info-label">Created</p>
+        <h3>{{ team.created_at|date:"d M Y" }}</h3>
+    </div>
+</div>
+
+<!--Mission, Description and specialisation-->
+<div class="card">
+    <div class="card-title">Mission & Specialisation</div>
+
+    <p><strong>Mission:</strong></p>
+    <p>{{ team.mission|default:"No mission added." }}</p>
+
+    <p><strong>Description:</strong></p>
+    <p>{{ team.description|default:"No description added." }}</p>
+
+    <p><strong>Key Skills:</strong></p>
+
+    <!--Skills are shown as tags-->
+    <div class="team-skills">
+        {% for skill in team.skills.all %}
+            <span class="tag">{{ skill.skill_name }}</span>
+        {% empty %}
+            <span>No skills added yet.</span>
+        {% endfor %}
+    </div>
+</div>
+
+<!--Team Members section-->
+<div class="card">
+    <div class="card-title">Team Members</div>
+
+    {% if team.members.all %}
+        <div class="members-grid">
+            {% for member in team.members.all %}
+                <div class="member-card">
+
+                    <!--Avatar Placeholder.
+                    DiceBear is sued to generate a simple profile -style avatar based on the member's name-->
+                    <div class="member-avatar">
+                        <img src="https://api.dicebear.com/7.x/initials/svg?seed={{ member.user.first_name|first|upper }}{{ member.user.last_name|first|upper }}" alt="Profile avatar">
+                    </div>
+
+                    <!--Member Full Name-->
+                    <strong>
+                        {{ member.user.first_name }} {{ member.user.last_name }}
+                    </strong>
+
+                    <!--Role inside the team-->
+                    <p>{{ member.role_in_team|default:"Engineer" }}</p>
+
+                    <!--Member contact email-->
+                    {% if member.user.email %}
+                        <div class="team_leader-email">
+                            <span class="email-icon">✉</span>
+                            <a href="mailto:{{ member.user.email }}">{{ member.user.email }}</a>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+
+        </div>
+    {% else %}
+
+        <p>No team members added yet.</p>
+    {% endif %}
+</div>
+
+<!--Contact and action section-->
+<div class="contact-action-card">
+
+    <!--Main team contact email-->
+    <div>
+        <p class="hero-label">Contact</p>
+
+        {% for contact in team.contact_channels.all %}
+            {% if contact.channel_type|lower == "email" %}
+                <h3><a href="mailto:{{ contact.channel_value }}">{{ contact.channel_value }}</a></h3>
+            {% endif %}
+        {% empty %}
+            <h3>No contact added</h3>
+        {% endfor %}
+    </div>
+
+    <!--Quick Action buttons-->
+    <div class="contact-actions">
+
+        {% for contact in team.contact_channels.all %}
+            {% if contact.channel_type|lower == "email" %}
+                <a href="mailto:{{ contact.channel_value }}" class="btn btn-outline">Email Team</a>
+            {% endif %}
+        {% endfor %}
+
+        <a href="{% url 'schedule_meeting' team.id %}" class="btn btn-primary">Schedule Meeting</a>
+        <a href="{% url 'teams_list' %}" class="btn btn-outline">Back to Teams</a>
+    </div>
+</div>
+
+<!--Repositories and communication channels-->
+<div class="row">
+
+    <!--Code Repositories linked to the team-->
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-title">Repositories</div>
+
+            {% for repo in team.repositories.all %}
+                <p>
+                    <strong>{{ repo.repo_name }}:</strong>
+
+                    {% if repo.repo_url %}
+                        <a href="{{ repo.repo_url }}" target="_blank">Open Repo</a>
+                    {% else %}
+                        No link
+                    {% endif %}
+                </p>
+
+                <small>{{ repo.repo_description }}</small>
+
+            {% empty %}
+                <p>No repositories added.</p>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!--Slack / Teams / Other communication channels-->
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-title">Team Channels</div>
+
+            {% for channel in team.channels.all %}
+                <p>
+                    <strong>{{ channel.platform }}:</strong>
+                    {% if channel.channel_link %}
+                        <a href="{{ channel.channel_link }}" target="_blank">{{ channel.channel_name }}</a>
+                    {% else %}
+                        {{ channel.channel_name }}
+                    {% endif %}
+                </p>
+            {% empty %}
+                <p>No channels added.</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!--Dependencies section-->
+<div class="card" id="dependencies">
+    <div class="card-title">Dependencies</div>
+
+    <div class="row">
+
+        <!--Downstream dependencies : Team or services that this team depends on-->
+        <div class="col-md-6">
+            <p><strong>Downstream Dependencies</strong></p>
+            <ul>
+                {% for dep in team.outgoing_dependencies.all %}
+                    <li>
+                        {{ dep.target_team.team_name }}
+                        <small>({{ dep.dependency_type }})</small>
+                    </li>
+                {% empty %}
+                    <li>No downstream dependencies.</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <!--Upstream dependencies : Other team that depends on this team-->
+        <div class="col-md-6">
+            <p><strong>Upstream Dependencies</strong></p>
+            <ul>
+                {% for dep in team.incoming_dependencies.all %}
+                    <li>
+                        {{ dep.source_team.team_name }}
+                        <small>({{ dep.dependency_type }})</small>
+                    </li>
+                {% empty %}
+                    <li>No upstream dependencies.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--Final call-to-action for meeting scheduling-->
+<div class="schedule-cta" id="schedule">
+    <div>
+        <p class="hero-label">Collaboration</p>
+        <h2>Need to work with {{ team.team_name }}?</h2>
+        <p>Schedule a meeting directly with this team and keep collaboration activity recorded in the portal.</p>
+    </div>
+
+    <a href="{% url 'schedule_meeting' team.id %}" class="hero-btn">Schedule Meeting</a>
+</div>
+
+{% endblock %}

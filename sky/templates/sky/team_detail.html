@@ -1,0 +1,149 @@
+{% extends "sky/base.html" %} {% block title %}{{ team.team_name }} — Sky
+Engineering{% endblock %} {% block content %}
+<div class="back-bar">
+  <a href="/departments/{{ team.department.id }}/" class="back-btn"
+    >&larr; {{ team.department.department_name }}</a
+  >
+  <div class="breadcrumb">
+    <a href="/departments/">Departments</a>
+    &rsaquo;
+    <a href="/departments/{{ team.department.id }}/"
+      >{{ team.department.department_name }}</a
+    >
+    &rsaquo;
+    <span>{{ team.team_name }}</span>
+  </div>
+</div>
+
+<div class="detail-header">
+  <div class="card-tag">&#9632; Team</div>
+  <h1>{{ team.team_name }}</h1>
+  <p>{{ team.mission }}</p>
+  <div class="detail-meta">
+    <div class="detail-meta-item">
+      <span class="label">Team Leader</span>
+      <span class="value"
+        >{{ team.team_leader.get_full_name|default:"Not assigned" }}</span
+      >
+    </div>
+    <div class="detail-meta-item">
+      <span class="label">Department</span>
+      <span class="value">{{ team.department.department_name }}</span>
+    </div>
+    <div class="detail-meta-item">
+      <span class="label">Members</span>
+      <span class="value">{{ team.members.count }}</span>
+    </div>
+    <div class="detail-meta-item">
+      <span class="label">Status</span>
+      <span class="value"
+        >{% if team.is_active %}Active{% else %}Inactive{% endif %}</span
+      >
+    </div>
+  </div>
+</div>
+
+{% if team.description %}
+<div class="section">
+  <div class="section-title">Key Skills &amp; Technologies</div>
+  <div class="skills-wrap">
+    {% for skill in team.description.split %}
+    <span class="skill-tag">{{ skill|cut:"," }}</span>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+<div class="section">
+  <div class="section-title">Team Members</div>
+  {% if team.members.all %}
+  <div class="member-list">
+    {% for member in team.members.all %}
+    <div class="member-item">
+      <div class="member-avatar">
+        {{ member.user.first_name|first }}{{ member.user.last_name|first }}
+      </div>
+      <span class="member-name">{{ member.user.get_full_name }}</span>
+      <span class="member-role"
+        >{{ member.role_in_team|default:"Member" }}</span
+      >
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="empty">No members assigned yet.</div>
+  {% endif %}
+</div>
+
+<div class="section">
+  <div class="section-title">Upstream Dependencies</div>
+  {% if upstream %}
+  <div class="dep-list">
+    {% for dep in upstream %}
+    <div class="dep-item">
+      <span>{{ team.team_name }}</span>
+      <span class="dep-arrow">&rarr;</span>
+      <span>{{ dep.target_team.team_name }}</span>
+      <span class="badge badge-blue" style="margin-left: auto"
+        >{{ dep.get_dependency_type_display }}</span
+      >
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="empty">No upstream dependencies.</div>
+  {% endif %}
+</div>
+
+<div class="section">
+  <div class="section-title">Downstream Dependencies</div>
+  {% if downstream %}
+  <div class="dep-list">
+    {% for dep in downstream %}
+    <div class="dep-item">
+      <span>{{ dep.source_team.team_name }}</span>
+      <span class="dep-arrow">&rarr;</span>
+      <span>{{ team.team_name }}</span>
+      <span class="badge badge-amber" style="margin-left: auto"
+        >{{ dep.get_dependency_type_display }}</span
+      >
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="empty">No downstream dependencies.</div>
+  {% endif %}
+</div>
+
+{% if team.contact_channels.all %}
+<div class="section">
+  <div class="section-title">Contact Channels</div>
+  <div class="dep-list">
+    {% for ch in team.contact_channels.all %}
+    <div class="dep-item">
+      <span>{{ ch.get_channel_type_display }}</span>
+      <span class="dep-arrow">—</span>
+      <span>{{ ch.channel_value }}</span>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %} {% if team.repositories.all %}
+<div class="section">
+  <div class="section-title">Repositories</div>
+  <div class="dep-list">
+    {% for repo in team.repositories.all %}
+    <div class="dep-item">
+      <span>{{ repo.repo_name }}</span>
+      <a
+        href="{{ repo.repo_url }}"
+        class="btn btn-outline"
+        style="margin-left: auto"
+        target="_blank"
+        >View &rarr;</a
+      >
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %} {% endblock %}

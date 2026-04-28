@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% comment %}
+  department_list.html
+  Author: Hisham Suleman
+  Searchable listing of all departments in the organisation
+  URL: /departments/
+{% endcomment %}
+
+
+{% block content %}
+<div class="dashboard-hero">
+    <div>
+        <div class="hero-label">Departments Directory</div>
+        <h1>Explore Engineering Departments</h1>
+        <p>
+            Discover all departments across the organisation, understand their responsibilities,
+            and explore the teams that power each area.
+        </p>
+        <a href="/organisation/" class="hero-btn">View Organisation</a>
+    </div>
+
+    <div class="hero-insight-card">
+        <p>Departments Overview</p>
+        <h2>{{ departments.count }}</h2>
+        <small>active departments</small>
+    </div>
+</div>
+
+
+{# GET form so search results are bookmarkable and the URL updates with the query #}
+<form method="get" class="search-bar">
+    <input type="text" name="q" value="{{ query }}" class="search-input" placeholder="Search departments...">
+    <button type="submit" class="search-btn">Search</button>
+    {# only show clear button if a search is active #}
+    {% if query %}
+    <a href="/departments/" class="btn btn-outline">Clear</a>
+    {% endif %}
+</form>
+
+{# departments are prefetched with teams in the view so .count here costs no extra query #}
+<div class="cards-grid">
+    {% for dept in departments %}
+    <div class="card">
+        <div class="card-tag">&#9632; Department</div>
+        <div class="card-title">{{ dept.department_name }}</div>
+        {# truncate to 100 chars to keep all cards the same height #}
+        <div class="card-desc">{{ dept.department_description|truncatechars:100 }}</div>
+        <div class="card-meta">
+            <div class="card-meta-row">
+                <span class="card-meta-label">Head —</span>
+                {# falls back if no head is assigned #}
+                <span class="card-meta-value">{{ dept.department_head.get_full_name|default:"Not assigned" }}</span>
+            </div>
+            <div class="card-meta-row">
+                <span class="card-meta-label">Teams —</span>
+                <span class="card-meta-value">{{ dept.teams.count }}</span>
+            </div>
+        </div>
+        <div class="card-footer">
+            <span class="badge badge-green">Active</span>
+            <a href="{% url 'department_detail' dept.id %}" class="btn btn-primary">View &rarr;</a>
+        </div>
+    </div>
+    {% empty %}
+    {# shown when no departments match the search or none exist yet #}
+    <div class="empty" style="grid-column: 1 / -1;">
+        No departments found{% if query %} for "{{ query }}"{% endif %}.
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
