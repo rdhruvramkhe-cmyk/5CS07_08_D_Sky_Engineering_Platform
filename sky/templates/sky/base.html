@@ -1,34 +1,34 @@
 {% load static %}
+{% comment %}
+
+  Author: Hisham Suleman — W2116326
+  Shared base template extended by all pages in the sky app
+  Includes navbar, sidebar, footer and profile dropdown
+{% endcomment %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {# page title  #}
     <title>{% block title %}Sky Engineering Portal{% endblock %}</title>
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    {# bootstrap for layout and components #}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    {# shared group CSS file #}
     <link rel="stylesheet" href="{% static 'css/global.css' %}" />
 
+    {# lucide icons and chart.js loaded here so all pages can use them #}
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
-
   <body>
+
+    {# top navigation bar — logo, nav links, profile dropdown #}
     <nav class="topbar">
       <div class="brand">
-        <a
-          href="/"
-          style="
-            text-decoration: none;
-            color: #4f46e5;
-            font-size: 20px;
-            font-weight: bold;
-          "
-          >Sky Engineering</a
-        >
+        <a href="/" style="text-decoration: none; color: #4f46e5; font-size: 20px; font-weight: bold;">Sky Engineering</a>
       </div>
 
       <div class="nav-links">
@@ -36,24 +36,29 @@
         <a href="/departments/">Departments</a>
         <a href="/admin/">Admin</a>
 
+        {# show profile avatar if logged in, otherwise show login link #}
         {% if user.is_authenticated %}
         <div class="profile-dropdown">
-          <button
-            class="profile-avatar"
-            onclick="toggleProfileMenu()"
-            type="button"
-          >
-            {% if user.first_name and user.last_name %} {{
-            user.first_name|first|upper }}{{ user.last_name|first|upper }} {%
-            else %} {{ user.username|first|upper }} {% endif %}
+          <button class="profile-avatar" onclick="toggleProfileMenu()" type="button">
+            {# shows initials if first and last name exist, otherwise first letter of username #}
+            {% if user.first_name and user.last_name %}
+              {{ user.first_name|first|upper }}{{ user.last_name|first|upper }}
+            {% else %}
+              {{ user.username|first|upper }}
+            {% endif %}
           </button>
 
+          {# dropdown menu with user's name and logout button #}
           <div class="profile-menu" id="profileMenu">
             <p class="profile-name">
-              {% if user.first_name or user.last_name %} {{ user.first_name }}
-              {{ user.last_name }} {% else %} {{ user.username }} {% endif %}
+              {% if user.first_name or user.last_name %}
+                {{ user.first_name }} {{ user.last_name }}
+              {% else %}
+                {{ user.username }}
+              {% endif %}
             </p>
 
+            {# logout uses POST with csrf token for security #}
             <form method="post" action="/accounts/logout/">
               {% csrf_token %}
               <button type="submit" class="profile-logout">Logout</button>
@@ -66,27 +71,34 @@
       </div>
     </nav>
 
+    {# page layout — sidebar on left, main content on right #}
     <div class="page-wrapper">
+
+      {# sidebar quick access links — active class set by each template using blocks #}
       <aside class="sidebar">
         <h4>Quick Access</h4>
-        <a href="/organisation/" class="{% block nav_org %}{% endblock %}"
-          >Organisation</a
-        >
-        <a href="/departments/" class="{% block nav_dept %}{% endblock %}"
-          >Departments</a
-        >
+        <a href="/organisation/" class="{% block nav_org %}{% endblock %}">Organisation</a>
+        <a href="/departments/" class="{% block nav_dept %}{% endblock %}">Departments</a>
         <a href="/admin/">Admin</a>
       </aside>
 
       <div class="main-content">
-        {% if messages %} {% for message in messages %}
-        <div class="alert alert-{{ message.tags }}">{{ message }}</div>
-        {% endfor %} {% endif %} {% block content %} {% endblock %}
+        {# django messages — shows success, error or info alerts if any #}
+        {% if messages %}
+          {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+          {% endfor %}
+        {% endif %}
+
+        {# main content block — each template fills this in #}
+        {% block content %}{% endblock %}
       </div>
     </div>
 
+    {# footer #}
     <div class="footer">Sky Engineering © 2025</div>
 
+    {# profile dropdown toggle — closes if you click outside it #}
     <script>
       function toggleProfileMenu() {
         document.getElementById("profileMenu").classList.toggle("show");
@@ -102,8 +114,10 @@
       };
     </script>
 
+    {# initialise lucide icons after page loads #}
     <script>
       lucide.createIcons();
     </script>
+
   </body>
 </html>
