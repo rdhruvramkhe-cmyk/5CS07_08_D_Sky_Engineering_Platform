@@ -1,7 +1,10 @@
+{# Author: Dhruv Ramkhalawon #}
+
 {% extends 'base.html' %}
 
 {% block content %}
 
+{# Page header showing the selected team and purpose of the page #}
 <div class="schedule-page-hero">
     <div>
         <p class="hero-label">Schedule Collaboration</p>
@@ -15,9 +18,11 @@
     </div>
 </div>
 
+{# Main meeting form card #}
 <div class="schedule-form-card">
     <h2>Meeting Details</h2>
 
+    {# Form used to create a new meeting for the current team #}
     <form method="POST" action="{% url 'schedule_meeting' team.id %}" class="schedule-form">
         {% csrf_token %}
 
@@ -38,6 +43,7 @@
             <textarea name="message" placeholder="Add a short meeting purpose or agenda"></textarea>
         </div>
 
+        {# Actions for cancelling or submitting the form #}
         <div class="form-actions">
             <a href="{% url 'team_detail' team.id %}" class="btn btn-outline">Cancel</a>
             <button type="submit" class="btn btn-primary">Create Meeting</button>
