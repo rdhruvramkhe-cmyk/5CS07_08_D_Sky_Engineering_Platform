@@ -1,7 +1,10 @@
+{# Author: Dhruv Ramkhalawon #}
+
 {% extends 'base.html' %}
 
 {% block content %}
 
+{# Hero section with welcome message and quick overview #}
 <div class="dashboard-hero">
     <div>
         <p class="hero-label">Sky Engineering Portal</p>
@@ -19,6 +22,7 @@
     </div>
 </div>
 
+{# Summary cards showing key dashboard figures #}
 <div class="dashboard-grid">
     <div class="stat-card">
         <i data-lucide="users" class="stat-icon"></i>
@@ -49,6 +53,7 @@
     </div>
 </div>
 
+{# Chart section for department and meeting data #}
 <div class="dashboard-charts">
     
     <div class="card">
@@ -63,6 +68,7 @@
 
 </div>
 
+{# Section listing the upcoming meetings #}
 <div class="dashboard-single-column">
     <div class="card">
         <div class="card-title">Upcoming Meetings</div>
@@ -83,6 +89,7 @@
     </div>
 </div>
 
+{# Safely pass Django data into JavaScript #}
 {{ dept_labels|json_script:"dept-labels" }}
 {{ dept_counts|json_script:"dept-counts" }}
 {{ meeting_labels|json_script:"meeting-labels" }}
@@ -90,11 +97,13 @@
 
 
 <script>
+// Read the chart data passed from Django.
 const deptLabels = JSON.parse(document.getElementById('dept-labels').textContent);
 const deptCounts = JSON.parse(document.getElementById('dept-counts').textContent);
 const meetingLabels = JSON.parse(document.getElementById('meeting-labels').textContent);
 const meetingCounts = JSON.parse(document.getElementById('meeting-counts').textContent);
 
+// Bar chart showing how many teams belong to each department.
 new Chart(document.getElementById('teamsChart'), {
     type: 'bar',
     data: {
@@ -127,10 +136,12 @@ new Chart(document.getElementById('teamsChart'), {
 
 const ctx = document.getElementById('meetingsChart').getContext('2d');
 
+// Create a gradient fill for the meetings line chart.
 const gradient = ctx.createLinearGradient(0, 0, 0, 300);
 gradient.addColorStop(0, 'rgba(0, 115, 255, 0.5)');   // Sky blue
 gradient.addColorStop(1, 'rgba(120, 0, 255, 0.1)');   // Purple fade
 
+// Line chart showing meetings across the timeline.
 new Chart(ctx, {
     type: 'line',
     data: {
@@ -164,4 +175,3 @@ new Chart(ctx, {
 
 
 {% endblock %}
-
